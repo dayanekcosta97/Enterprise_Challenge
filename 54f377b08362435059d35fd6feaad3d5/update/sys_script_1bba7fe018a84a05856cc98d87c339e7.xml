@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script">
+  <sys_script action="INSERT_OR_UPDATE">
+    <sys_id>1bba7fe018a84a05856cc98d87c339e7</sys_id>
+    <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
+    <sys_update_name>sys_script_1bba7fe018a84a05856cc98d87c339e7</sys_update_name>
+    <abort_action>false</abort_action>
+    <access>package_private</access>
+    <action_delete>false</action_delete>
+    <action_insert>true</action_insert>
+    <action_query>false</action_query>
+    <action_update>false</action_update>
+    <active>true</active>
+    <add_message>false</add_message>
+    <advanced>true</advanced>
+    <change_fields>false</change_fields>
+    <client_callable>false</client_callable>
+    <collection>x_915815_smart_log_entrega</collection>
+    <condition/>
+    <description/>
+    <execute_function>false</execute_function>
+    <filter_condition/>
+    <is_rest>false</is_rest>
+    <message/>
+    <name>Set Defaults on Entrega Insert</name>
+    <order>100</order>
+    <priority>100</priority>
+    <rest_method/>
+    <rest_method_text/>
+    <rest_service/>
+    <rest_service_text/>
+    <rest_variables/>
+    <role_conditions/>
+    <script><![CDATA[(function () {
+    current.setValue('status', 'pedido_criado');
+    current.setValue('risco_atraso', 'baixo');
+    current.setValue('ativo', 'true');
+    var now = new GlideDateTime();
+    current.setValue('ultima_atualizacao', now.getValue());
+})();
+]]></script>
+    <sys_name>Set Defaults on Entrega Insert</sys_name>
+    <sys_policy/>
+    <template/>
+    <when>before</when>
+  </sys_script>
+</record_update>

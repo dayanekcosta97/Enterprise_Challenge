@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_module">
+  <sys_app_module action="INSERT_OR_UPDATE">
+    <sys_id>8bf471cb36ea4577bf2d19f8bd91f165</sys_id>
+    <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
+    <sys_update_name>sys_app_module_8bf471cb36ea4577bf2d19f8bd91f165</sys_update_name>
+    <active>true</active>
+    <application>9b06db40f9f446d78f2c992196960d9b</application>
+    <filter>statusINem_transporte,proximo_destino^ativo=true</filter>
+    <link_type>FILTER</link_type>
+    <name>x_915815_smart_log_entrega</name>
+    <order>800</order>
+    <title>Entregas em Transporte</title>
+  </sys_app_module>
+</record_update>

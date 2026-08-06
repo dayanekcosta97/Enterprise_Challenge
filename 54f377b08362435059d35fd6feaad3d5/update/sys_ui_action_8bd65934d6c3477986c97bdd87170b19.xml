@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action">
+  <sys_ui_action action="INSERT_OR_UPDATE">
+    <sys_id>8bd65934d6c3477986c97bdd87170b19</sys_id>
+    <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
+    <sys_update_name>sys_ui_action_8bd65934d6c3477986c97bdd87170b19</sys_update_name>
+    <action_name>registrar_ocorrencia</action_name>
+    <active>true</active>
+    <client>true</client>
+    <client_script_v2/>
+    <comments/>
+    <condition>current.status != 'entregue' &amp;&amp; current.status != 'cancelado'</condition>
+    <form_action>true</form_action>
+    <form_button>true</form_button>
+    <form_button_v2>true</form_button_v2>
+    <form_context_menu>false</form_context_menu>
+    <form_link>false</form_link>
+    <form_menu_button_v2>false</form_menu_button_v2>
+    <form_style>unstyled</form_style>
+    <format_for_configurable_workspace>true</format_for_configurable_workspace>
+    <hint/>
+    <isolate_script>false</isolate_script>
+    <list_action>false</list_action>
+    <list_banner_button>false</list_banner_button>
+    <list_button>false</list_button>
+    <list_choice>false</list_choice>
+    <list_context_menu>false</list_context_menu>
+    <list_link>false</list_link>
+    <list_save_with_form_button>false</list_save_with_form_button>
+    <list_style/>
+    <messages/>
+    <name>Registrar ocorrência</name>
+    <onclick>openOcorrencia()</onclick>
+    <order>100</order>
+    <script><![CDATA[function openOcorrencia() {
+    var entregaId = g_form.getUniqueValue();
+    var url = 'x_915815_smart_log_ocorrencia.do?sys_id=-1&sysparm_query=entrega=' + entregaId;
+    window.location.href = url;
+}]]></script>
+    <show_insert>true</show_insert>
+    <show_multiple_update>false</show_multiple_update>
+    <show_query>false</show_query>
+    <show_update>true</show_update>
+    <sys_name>Registrar ocorrência</sys_name>
+    <sys_overrides/>
+    <table>x_915815_smart_log_entrega</table>
+    <ui11_compatible>false</ui11_compatible>
+    <ui16_compatible>false</ui16_compatible>
+  </sys_ui_action>
+</record_update>

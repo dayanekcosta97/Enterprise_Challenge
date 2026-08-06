@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script">
+  <sys_script action="INSERT_OR_UPDATE">
+    <sys_id>9aa23f5e677f4dbc91f81c61d19b282d</sys_id>
+    <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
+    <sys_update_name>sys_script_9aa23f5e677f4dbc91f81c61d19b282d</sys_update_name>
+    <abort_action>false</abort_action>
+    <access>package_private</access>
+    <action_delete>false</action_delete>
+    <action_insert>true</action_insert>
+    <action_query>false</action_query>
+    <action_update>false</action_update>
+    <active>true</active>
+    <add_message>false</add_message>
+    <advanced>true</advanced>
+    <change_fields>false</change_fields>
+    <client_callable>false</client_callable>
+    <collection>x_915815_smart_log_tracking</collection>
+    <condition/>
+    <description/>
+    <execute_function>false</execute_function>
+    <filter_condition/>
+    <is_rest>false</is_rest>
+    <message/>
+    <name>Update Entrega from Tracking</name>
+    <order>100</order>
+    <priority>100</priority>
+    <rest_method/>
+    <rest_method_text/>
+    <rest_service/>
+    <rest_service_text/>
+    <rest_variables/>
+    <role_conditions/>
+    <script><![CDATA[(function () {
+    var entregaSysId = current.getValue('entrega');
+    var novoStatus = current.getValue('novo_status');
+
+    if (!entregaSysId) {
+        gs.error('Update Entrega from Tracking: entrega reference is empty on tracking record ' + current.getUniqueValue());
+        return;
+    }
+
+    if (!novoStatus) {
+        return;
+    }
+
+    var gr = new GlideRecord('x_915815_smart_log_entrega');
+    if (gr.get(entregaSysId)) {
+        gr.setValue('status', novoStatus);
+
+        var dataAtualizacao = current.getValue('data_atualizacao');
+        if (dataAtualizacao) {
+            gr.setValue('ultima_atualizacao', dataAtualizacao);
+        } else {
+            var now = new GlideDateTime();
+            gr.setValue('ultima_atualizacao', now.getValue());
+        }
+
+        gr.update();
+    } else {
+        gs.error('Update Entrega from Tracking: could not find entrega with sys_id ' + entregaSysId);
+    }
+})();
+]]></script>
+    <sys_name>Update Entrega from Tracking</sys_name>
+    <sys_policy/>
+    <template/>
+    <when>after</when>
+  </sys_script>
+</record_update>
