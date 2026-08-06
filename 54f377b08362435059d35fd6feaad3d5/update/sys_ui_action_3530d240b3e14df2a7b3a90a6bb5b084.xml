@@ -6,7 +6,9 @@
     <action_name>registrar_entrega</action_name>
     <active>true</active>
     <client/>
-    <client_script_v2/>
+    <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
     <comments/>
     <condition>current.status == 'em_transporte' || current.status == 'proximo_destino'</condition>
     <form_action>true</form_action>
@@ -14,7 +16,7 @@
     <form_button_v2>true</form_button_v2>
     <form_context_menu>false</form_context_menu>
     <form_link>false</form_link>
-    <form_menu_button_v2>false</form_menu_button_v2>
+    <form_menu_button_v2>true</form_menu_button_v2>
     <form_style>primary</form_style>
     <format_for_configurable_workspace>true</format_for_configurable_workspace>
     <hint/>
@@ -45,8 +47,11 @@ trk.setValue('novo_status', 'entregue');
 trk.setValue('data_atualizacao', now.getValue());
 trk.setValue('origem_atualizacao', 'manual');
 trk.setValue('responsavel', gs.getUserID());
+trk.setValue('localizacao_atual', 'Destino final');
+trk.setValue('descricao', 'Entrega concluída e recebida pelo cliente.');
 trk.insert();
 
+gs.addInfoMessage('Entrega registrada com sucesso.');
 action.setRedirectURL(current);]]></script>
     <show_insert>true</show_insert>
     <show_multiple_update>false</show_multiple_update>

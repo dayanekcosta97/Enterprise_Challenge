@@ -6,7 +6,9 @@
     <action_name>iniciar_transporte</action_name>
     <active>true</active>
     <client/>
-    <client_script_v2/>
+    <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
     <comments/>
     <condition>current.status == 'pronto_envio'</condition>
     <form_action>true</form_action>
@@ -14,7 +16,7 @@
     <form_button_v2>true</form_button_v2>
     <form_context_menu>false</form_context_menu>
     <form_link>false</form_link>
-    <form_menu_button_v2>false</form_menu_button_v2>
+    <form_menu_button_v2>true</form_menu_button_v2>
     <form_style>primary</form_style>
     <format_for_configurable_workspace>true</format_for_configurable_workspace>
     <hint/>
@@ -43,8 +45,11 @@ trk.setValue('novo_status', 'em_transporte');
 trk.setValue('data_atualizacao', now.getValue());
 trk.setValue('origem_atualizacao', 'manual');
 trk.setValue('responsavel', gs.getUserID());
+trk.setValue('localizacao_atual', 'Em rota');
+trk.setValue('descricao', 'A entrega saiu para transporte.');
 trk.insert();
 
+gs.addInfoMessage('Transporte iniciado com sucesso.');
 action.setRedirectURL(current);]]></script>
     <show_insert>true</show_insert>
     <show_multiple_update>false</show_multiple_update>

@@ -18,7 +18,7 @@
     <condition/>
     <description/>
     <execute_function>false</execute_function>
-    <filter_condition>status=entregue^statusCHANGES</filter_condition>
+    <filter_condition>statusCHANGES</filter_condition>
     <is_rest>false</is_rest>
     <message/>
     <name>Mark as Delivered</name>
@@ -31,9 +31,22 @@
     <rest_variables/>
     <role_conditions/>
     <script><![CDATA[(function () {
-    var now = new GlideDateTime();
-    current.setValue('data_real_entrega', now.getValue());
-    current.setValue('ativo', 'false');
+    var newStatus = current.getValue('status');
+    if (newStatus === 'entregue') {
+        if (!current.getValue('data_real_entrega')) {
+            var now = new GlideDateTime();
+            current.setValue('data_real_entrega', now.getValue());
+        }
+        current.setValue('ativo', 'false');
+        current.setValue('ultima_atualizacao', new GlideDateTime().getValue());
+    } else {
+        // When status changes away from entregue, clear delivery date
+        var previousStatus = previous.getValue('status');
+        if (previousStatus === 'entregue') {
+            current.setValue('data_real_entrega', '');
+            current.setValue('ativo', 'true');
+        }
+    }
 })();
 ]]></script>
     <sys_name>Mark as Delivered</sys_name>

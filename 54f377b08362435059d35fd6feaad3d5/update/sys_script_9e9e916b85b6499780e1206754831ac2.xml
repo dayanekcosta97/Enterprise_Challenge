@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script">
   <sys_script action="INSERT_OR_UPDATE">
-    <sys_id>1bba7fe018a84a05856cc98d87c339e7</sys_id>
+    <sys_id>9e9e916b85b6499780e1206754831ac2</sys_id>
     <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
-    <sys_update_name>sys_script_1bba7fe018a84a05856cc98d87c339e7</sys_update_name>
+    <sys_update_name>sys_script_9e9e916b85b6499780e1206754831ac2</sys_update_name>
     <abort_action>false</abort_action>
     <access>package_private</access>
     <action_delete>false</action_delete>
@@ -14,14 +14,14 @@
     <advanced>true</advanced>
     <change_fields>false</change_fields>
     <client_callable>false</client_callable>
-    <collection>x_915815_smart_log_entrega</collection>
+    <collection>x_915815_smart_log_ocorrencia</collection>
     <condition/>
     <description/>
     <execute_function>false</execute_function>
     <filter_condition/>
     <is_rest>false</is_rest>
     <message/>
-    <name>Set Defaults on Entrega Insert</name>
+    <name>Set Defaults on Ocorrencia Insert</name>
     <order>100</order>
     <priority>100</priority>
     <rest_method/>
@@ -31,25 +31,19 @@
     <rest_variables/>
     <role_conditions/>
     <script><![CDATA[(function () {
-    if (!current.getValue('status')) {
-        current.setValue('status', 'pedido_criado');
+    if (!current.getValue('estado')) {
+        current.setValue('estado', 'aberta');
     }
-    if (!current.getValue('prioridade')) {
-        current.setValue('prioridade', 'media');
-    }
-    if (!current.getValue('risco_atraso')) {
-        current.setValue('risco_atraso', 'baixo');
-    }
-    if (!current.getValue('ativo')) {
-        current.setValue('ativo', 'true');
-    }
-    if (!current.getValue('ultima_atualizacao')) {
+    if (!current.getValue('data_abertura')) {
         var now = new GlideDateTime();
-        current.setValue('ultima_atualizacao', now.getValue());
+        current.setValue('data_abertura', now.getValue());
+    }
+    if (!current.getValue('responsavel')) {
+        current.setValue('responsavel', gs.getUserID());
     }
 })();
 ]]></script>
-    <sys_name>Set Defaults on Entrega Insert</sys_name>
+    <sys_name>Set Defaults on Ocorrencia Insert</sys_name>
     <sys_policy/>
     <template/>
     <when>before</when>
