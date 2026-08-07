@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>timeFromCreateToActivate=184352000</attributes>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Envia e-mail ao cliente quando o risco de atraso muda para alto</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source>fluent</generation_source>
+        <internal_name>alerta_de_risco_de_atraso</internal_name>
+        <label_cache>[{"name":"Updated_1.current.email_cliente","label":"Trigger - Record Updated➛x_915815_smart_log_entrega Record➛Email Cliente","type":"string","base_type":"string","usedInstances":{"1d607f69-ccc5-4ec6-b566-a5bde31a1d4a":["condition"],"f31f18cf-43d3-43a8-92c7-e7929bddc040":["ah_to"]},"attributes":{}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛x_915815_smart_log_entrega Record➛Number","type":"string","base_type":"string","usedInstances":{"f31f18cf-43d3-43a8-92c7-e7929bddc040":["ah_subject"]},"attributes":{}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛x_915815_smart_log_entrega Record","type":"reference","base_type":"reference","usedInstances":{"f31f18cf-43d3-43a8-92c7-e7929bddc040":["record"],"fd229ae1-8cd8-4dca-a9b1-56f4c35bb7c6":["values"]},"attributes":{}},{"name":"Updated_1.current.ultima_atualizacao","label":"Trigger - Record Updated➛x_915815_smart_log_entrega Record➛Ultima Atualizacao","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"fd229ae1-8cd8-4dca-a9b1-56f4c35bb7c6":["values"]},"attributes":{}},{"name":"Updated_1.current.status","label":"Trigger - Record Updated➛x_915815_smart_log_entrega Record➛Status","type":"string","base_type":"string","usedInstances":{"fd229ae1-8cd8-4dca-a9b1-56f4c35bb7c6":["values"]},"attributes":{}}]</label_cache>
+        <master_snapshot>79f6b6e183ae875059d35fd6feaad3b9</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Alerta de risco de atraso</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>92f6f6e183ae875059d35fd6feaad3a7</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 21:47:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f43732e3d1d2469ea30ad234b5aa1183</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Alerta de risco de atraso</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name>sys_hub_flow_f43732e3d1d2469ea30ad234b5aa1183</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:34</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_915815_smart_log_entrega">risco_atraso=alto^risco_atrasoCHANGES^ativo=true<item display_value="Alto" endquery="false" field="risco_atraso" goto="false" newquery="false" operator="=" or="false" value="alto"/>
+            <item endquery="false" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+            <item endquery="false" field="ativo" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>92f6f6e183ae875059d35fd6feaad3a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:34</sys_updated_on>
+        <table>x_915815_smart_log_entrega</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>f43732e3d1d2469ea30ad234b5aa1183</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:34</sys_created_on>
+        <sys_id>5af6f6e183ae875059d35fd6feaad3a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:34</sys_updated_on>
+        <trigger display_value="">92f6f6e183ae875059d35fd6feaad3a7</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=f43732e3d1d2469ea30ad234b5aa1183^sys_idNOT IN5af6f6e183ae875059d35fd6feaad3a8"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=f43732e3d1d2469ea30ad234b5aa1183^sys_idNOT IN85c7f3f88362435059d35fd6feaad331,c5c7f3f88362435059d35fd6feaad326,f4c7b3f88362435059d35fd6feaad3d9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Alerta de risco de atraso">f43732e3d1d2469ea30ad234b5aa1183</model>
+        <model_id>f43732e3d1d2469ea30ad234b5aa1183</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f43732e3d1d2469ea30ad234b5aa1183</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 21:47:13</sys_created_on>
+        <sys_id>85c7f3f88362435059d35fd6feaad331</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 21:47:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=85c7f3f88362435059d35fd6feaad331"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Alerta de risco de atraso">f43732e3d1d2469ea30ad234b5aa1183</model>
+        <model_id>f43732e3d1d2469ea30ad234b5aa1183</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f43732e3d1d2469ea30ad234b5aa1183</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 21:47:12</sys_created_on>
+        <sys_id>c5c7f3f88362435059d35fd6feaad326</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 21:47:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c5c7f3f88362435059d35fd6feaad326"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Alerta de risco de atraso">f43732e3d1d2469ea30ad234b5aa1183</model>
+        <model_id>f43732e3d1d2469ea30ad234b5aa1183</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f43732e3d1d2469ea30ad234b5aa1183</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 21:47:12</sys_created_on>
+        <sys_id>f4c7b3f88362435059d35fd6feaad3d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 21:47:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f4c7b3f88362435059d35fd6feaad3d9"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=f43732e3d1d2469ea30ad234b5aa1183^sys_idNOT INc690094116cc4fb9abb84f3f2d325b74"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Alerta de risco de atraso">f43732e3d1d2469ea30ad234b5aa1183</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:28</sys_created_on>
+        <sys_id>c690094116cc4fb9abb84f3f2d325b74</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:32</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1YXW/UOhD9K1GeLtIitUJI3L5xgUIlPiRaLg98RF57krXw2nvtyW5zq/53xomz6yZZCNBQEH3azdjxnJk5Z2zn3UWKVhYF2BPtkGkOp5U7EelRms5Sxeag6O8ZmyugZ6kRrGbqrFoBmdGbM82WfkzACrQAjc2rfGEkh+fS0fO7D7N0ybRgaGyVHqEtYZbm1izPYLlSDGmtnClHRmMF2PTo8OBgltbrBie04Jqp0j+fZ38f3n9weD9zS2YxU6bIyKmFgnkQ0tGC1b9j5vKFVMKCbvCtmCV/6L1f9OLuQMGB8ANywg3n6BMhtkFFoQeLBSZeaVVFU86d/B/q90sHWZTMMCM/XZjNa8iBEHM4lrp2FwaV4UxtnxhSReclgqNYLi+3WTmWoEJhHbdyhQ85ynWb/MvZGCa8LnXydgE6eePAJnV5e7QolBSQqWZsPC3aQL/Gi5oIEbRQHFvqbEPIMsqfbb23pOlTYxwBBsP9kkMcSMGvSo2UibUvs8+j12Q6FVdOwTlp/C+i1EWfMQ0rvsKWCwoU/it9jHUy8raU9WKswUfm58G9z2LiMeTGNvU72U1sMfkXTpasCJQgDwo4RhXK6c3o6YWk1yiEXR72gNJGZ2OAvTT67s/ENTe4iMG0OP4h+5UEETP3gXM/iO77dN+VnduyaX01to7Sg/Vb1N4n7H7n2KHwn6z2XJkNkei6Bc501aOs9yQ1sbRKuCFn5ziZZEgeUFhTarEPxdUZ0+iW8U9fBrGbkfwlIGelwjs3LVSPjdpgrNE4jq5S47GRet1RbtDtrTp3qXqlkych6KQ+2brrFmqNvENPaqO8tJQOrLeUNu0JtggmEq0f72OhnTcC1B7ob1QjdFDYcnGnkxZ/RyKteaQ6Bku+1/etWJrMPTJaSGxOYV19tENukrtNKA2PALSEsNJxkzG0zJn35cHBPcEUmo+x+dGzhy+fPjn9yCjiMCcossOiH1prBPXiBA6EhAO5nIxr4WvD91JtwzS6DCktQmQR4m2zWxoB6nHEhMAv2n9WJbr0MuIJ6W37GWHKe/lEF62hcxhdHfwZzN+BJ+vlRkNm8sErlMyTkBzqcPMqwQUQJkX7P61co5pui9HGF7QL7bFJaCCxPwXc9dyk6g8Y/etUU+5O62iM3/zpZP9NquP8dg/ape+smXXdMi61JHPGF0wXzQms5e4xqRkYXyTNlKSZMqGueefDCJ/OGazBVr1gvTEpV8JLZSrPTG1Y5Xrti7qDbxThLEoGkoRuRHBjLaHduxydARCKKuoGoViddhCsI/vBjtD7/f0uDWC83j98BtTOWbZkGQAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=f43732e3d1d2469ea30ad234b5aa1183^sys_idNOT INf31f18cf43d343a892c7e7929bddc040,fd229ae18cd84dcaa9b156f4c35bb7c6"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="">c1806bf4a70323008299b39f087901cb</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Alerta de risco de atraso">f43732e3d1d2469ea30ad234b5aa1183</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>1d607f69-ccc5-4ec6-b566-a5bde31a1d4a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:28</sys_created_on>
+        <sys_id>f31f18cf43d343a892c7e7929bddc040</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:32</sys_updated_on>
+        <ui_id>f31f18cf-43d3-43a8-92c7-e7929bddc040</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Y3U4jNxR+FWuuWikKk4QEwh2FoiKxbLVQerFdjc7YnsStxx5sDxAQ77JVLyr1vk/Ai/V4xgmTkIa/RWJbbpb1Gfuc7xx/n4+dj1eRgpxHW5GDVPKkGrSiM5ClN14kw05/s9NPbA7GJVKPEq6c4SPASUzYQsLk5CFzCzDo2XETbV1FdCwkM1xFWx8/tSLBcHFnuBkP0mwdNuJetxfHm93hMO0Ns3hzYxh32Dq6kJByiVOPPVAcL8PtJsVS20FzLTmsP2jDPJ5OK+IXjivGEUgG0vJWlINi4LSZzCyGA3uvJBqcKXE8Fsp5h2NOHJgRd8Rwih6JC/ByuLDiEtFsxn51xjFh6sFFjWESalibs11wcIT+qStNmErHWlBu61IxnkEp3U7TVk94XzihVb2kRlCv1rLM1WFdqWjmYLplaCktguCFT98nFLLNjsb6/MMU5Z5QVaXCR6kpyNkInDMiLZ3HcxVxyXN0lORQFEKNksLoM1EtRix5eyRx0M6kPsegVoxUG6gH3sZqQ3sP7buV+QSM8Fm8Qze4GEliE0uNKKa5VcGj61ZkJ3ZHgrW3OWJxk9PSI6wzDrkldXn8ksrRNgY+4yGN69ZMB+eALEUG/5bwHIRsiKFzl/OeCw9gdzwYpOkg7W/0btk9pBnbSLMBbNBeg937isqScfLzFMYt0+8iC3RPtZYc1CLXEdvaXlWnGde7j+R6MASy1yQjThPcFjkhQGaQvNGhFipk+D9wRFhise5tcqyJCFk1VrTIRJckL63DaQ6/zMmo3VTQ+utVUCBAsO4uZcdXIbGXkBKME1umv3LqGiraduhQXMLNnzd/IDHyQhsHynFidWrw3xJIaBvk6uqnAlFzlnTatDTGs0mVecrN9fVdLX45x/fJuc9WNStOG3I+muW/rCZBvxa3V40W5Hs0NQbpDlZLt+5Kd5Tb6ELx61XR/1wkqWaThkJ+KeO4R8fd6i//0fBLYPob+JZQKdAxb9UT1qYz6mFRD/Z9bJEJCrm2pMyBwL/pwnAJFJMGBuTmc1Mg7RChWBLgUFuLE09LUXDCUCXU4Tle5sQISzXxh7wzYDVRMOeSfG9dhQlwAwpQY+QuNhJiBeKrseFarDJ2Ei9AkgslcsRtiK/uacmNB4/7pFfBO9H05i9SaI9jGsgQTTC4K+2sGBiazeFDJLMwufbcWRmmroJGuAE71Vh2VYK5+X0+w2YMTpQ+A9vckr+5b5OmSh81qJVIRQUQp6HPTJucI3wv9AoUQZdYX2X9NvJVELfxsMDttdW6KWlSs9aciiePVqPacuSv7eRAj4R1glrSb8fBe3PWfMC7p/Abed/I+3LkJV+avfe1eljZ6rNuo9V/V5/id4710OTHLpcLLf6H43cHtw1+42l381mHH/T7vcFbi3/2U7M4Z11mdFGE3Kpb/Et0/vql02j8S66lyy66D6Dt+kraUjb3c0r17PowBbMILtCXaVpW5RZsgcW74QvZ370lc/ysh+a2tZoKrIRtPCrPhRvjQbfkfdjrztMeX5ui4thy+u/ffn4FMqgv7o9QQXbEwdDxnuDSb3X9bokW1UElzkoWOBkepK/lctz4me4h12SnV2ulXfEkCReNZcp52KJ7n3+rf6uEprj0XEeoMnjMo6/39uh7BR2BcYmXuYoQL9cNkB6UPumwZyv5yOMGH3d25vhYBXwMH9efeUd5I+RXRcj0iYzsrP6BbNC8NS9QMn00J/tvnPyPc/LTP0zlXNemHAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f31f18cf43d343a892c7e7929bddc040"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="">2de05916c31332002841b63b12d3aee1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Alerta de risco de atraso">f43732e3d1d2469ea30ad234b5aa1183</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>1d607f69-ccc5-4ec6-b566-a5bde31a1d4a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:28</sys_created_on>
+        <sys_id>fd229ae18cd84dcaa9b156f4c35bb7c6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:32</sys_updated_on>
+        <ui_id>fd229ae1-8cd8-4dca-a9b1-56f4c35bb7c6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTU8bMRD9Kyufo9UugQhyq6CcWlCh5UKJNVnPJlb9sbW9gRDlv3e8Xpa0ELWVekFqbvNm3vjNs3dyu2EGNLIpCzBXyLtgxFag2gg+8JPy6Lg84l6DC1zZBQ8Oqm/SLKhKSN8oWN/8UXEDjnoHdGy6YdVSKuHQsOnt3YhJQexJicXRSTmpxuV4fFAUB8eH5XwynpcHYgyIh9RCwRwVlX6OUil+TXlYN69iH3a52UVKWCeinmLE8CGgEUhCalAeR0yDERCsW7NpcC0BDkFcGrUeKpbSBGrIYu2Dl4907HER62qkySpMuSHkvVsJrs8gwDV1rkLr+tJqaWWFPnkisIZWhdNdLBVcNkFakyjdmD3bqlabi2QJGxo8XQ4hrScR2MQ5o/J+jPp6ae+vnlSeS9NZ0ieVrUANEYTg5LwNUc+GoUJNjbiGpqEr5o2zK9mRSYvOF4qCvFb2ng71cmFyqKLwnGyF/Jzwsw6+ASfjFB+pDZG3I+bX/lSB98+zkIn8exuVpMn6GXiyIVIqJ5vwjg5YYS93Oxqedvea/c6zJq7DBXxti2IsNpsvDWlCwcu8ah3ZELbbWVTJIdCh8hEqsHtrczJZ6p9qiW7synIfCPT7mSlP1Z3NiZv6JM6VDZChzoD8bMAsIfptZ2QnjTtoOlWSYMyMDbImWNgM2mA1BAp0l/J27jCzmZO+spnADOjD9DafWScXqF/O6aUPqGH2/tPLz/y/eX9j3m/XnsDiZO/aK+c7a+9cohL+ee8Nz/pp56GmewrI0zP/Ze/1yeymT/a7r/xXu6+cFN3vDW3ANNybX4A7/3V7VuHdD4WNbjPnBwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fd229ae18cd84dcaa9b156f4c35bb7c6"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=f43732e3d1d2469ea30ad234b5aa1183^sys_idNOT IN1d607f69ccc54ec6b566a5bde31a1d4a"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">39f6b6e183ae875059d35fd6feaad340</block>
+        <comment>Verificar se o e-mail do cliente está preenchido</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Alerta de risco de atraso">f43732e3d1d2469ea30ad234b5aa1183</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:28</sys_created_on>
+        <sys_id>1d607f69ccc54ec6b566a5bde31a1d4a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:32</sys_updated_on>
+        <ui_id>1d607f69-ccc5-4ec6-b566-a5bde31a1d4a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VUW/aMBD+K5OfUZQAyQZvFR0SUlumwSpNUxVdbAesOXZmO9As4r/vnASoVqZ23evecp/vzt93uS9piK5cWTm71lfWio0i028PAyKUx/C5IQoKTqaEasWEE1qRAdmBrDzWNF9KBo6zNApoZQxXLuAFCJlSKTDgh8Nidbdcf7z9tP6KdUzYUkJ9/8ZyuhWSYVZHsQSDzBw3ZNr8diQYdp9AnMdRGNPRMBkNw3D4YRxlySiLhmwEfJxgQwkZl5g6e6LtglxXlx6yzgi16eObvnR1BLVhnsowHBD+6LhiHEnkIC0fkAIU6tSmJlNnKgQMB7ZUsj5lbIVy2I343EcrfnLfKQx9Zs5RF+Xd6SlM+1l2cH4NDpBKRV1l+lS61YJy202E8Rwq6WZPsS5hWbYq2xIHmTxWa1kV6q4bBjk1OL46RCqLJHjplXruvZB8tdX7z0eWc6HaqfSHUlOQpwgczi6rnOfTEC55gY3SAsoSJ5qWRu9EW4xcimAjMQhyqfd4qd/TAKgnHuBgIZgjft3C92CEV3GLbbAYd8GmlhpRHrW1l5PDgNjaziRYe9aIw01/VJ5hp7jXlnbj8SVtoyu8eMd7GYdBQzyrG70RdKGsA5S9qu3Cr2DEkvB9nkwopfGY0ySLkwTijPFRBBEbA+lXNQ8hjyY0uryqMLqwlmkLnK343F3kZYu84t5nFnnXbf6fGf2NW6IX3NIjr7JLHP93yz+7xdPMwAqatn8AbOc/WG+0Sz/0ueCSXVyhS3568DvdsTq9DSoslq09tjj+mPxBjSvnXXeG9tp897LP2OEX8Z0qvOIGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f43732e3d1d2469ea30ad234b5aa1183</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 21:47:13</sys_created_on>
+        <sys_id>01c7f3f88362435059d35fd6feaad339</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 21:47:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f43732e3d1d2469ea30ad234b5aa1183</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 21:47:12</sys_created_on>
+        <sys_id>81c7f3f88362435059d35fd6feaad321</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 21:47:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f43732e3d1d2469ea30ad234b5aa1183</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 21:47:13</sys_created_on>
+        <sys_id>81c7f3f88362435059d35fd6feaad32d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 21:47:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_f43732e3d1d2469ea30ad234b5aa1183"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version>-1</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Envia e-mail ao cliente quando o risco de atraso muda para alto</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>alerta_de_risco_de_atraso</internal_name>
+        <label_cache>[{"name":"Updated_1.current.email_cliente","label":"Trigger - Record Updated➛x_915815_smart_log_entrega Record➛Email Cliente","type":"string","base_type":"string","usedInstances":{"1d607f69-ccc5-4ec6-b566-a5bde31a1d4a":["condition"],"f31f18cf-43d3-43a8-92c7-e7929bddc040":["ah_to"]},"attributes":{}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛x_915815_smart_log_entrega Record➛Number","type":"string","base_type":"string","usedInstances":{"f31f18cf-43d3-43a8-92c7-e7929bddc040":["ah_subject"]},"attributes":{}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛x_915815_smart_log_entrega Record","type":"reference","base_type":"reference","usedInstances":{"f31f18cf-43d3-43a8-92c7-e7929bddc040":["record"],"fd229ae1-8cd8-4dca-a9b1-56f4c35bb7c6":["values"]},"attributes":{}},{"name":"Updated_1.current.ultima_atualizacao","label":"Trigger - Record Updated➛x_915815_smart_log_entrega Record➛Ultima Atualizacao","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"fd229ae1-8cd8-4dca-a9b1-56f4c35bb7c6":["values"]},"attributes":{}},{"name":"Updated_1.current.status","label":"Trigger - Record Updated➛x_915815_smart_log_entrega Record➛Status","type":"string","base_type":"string","usedInstances":{"fd229ae1-8cd8-4dca-a9b1-56f4c35bb7c6":["values"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Alerta de risco de atraso</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Alerta de risco de atraso">f43732e3d1d2469ea30ad234b5aa1183</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>79f6b6e183ae875059d35fd6feaad3b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:32</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=79f6b6e183ae875059d35fd6feaad3b9"/>
+    <sys_variable_value action="delete_multiple" query="document_key=79f6b6e183ae875059d35fd6feaad3b9"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=79f6b6e183ae875059d35fd6feaad3b9"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=79f6b6e183ae875059d35fd6feaad3b9^sys_idNOT INb5f6b6e183ae875059d35fd6feaad3bc"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>79f6b6e183ae875059d35fd6feaad3b9</id>
+        <name>Alerta de risco de atraso</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:32</sys_created_on>
+        <sys_id>b5f6b6e183ae875059d35fd6feaad3bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:32</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=b5f6b6e183ae875059d35fd6feaad3bc"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=79f6b6e183ae875059d35fd6feaad3b9^sys_idNOT IN4af6f6e183ae875059d35fd6feaad30e,79f6b6e183ae875059d35fd6feaad3be,8af6f6e183ae875059d35fd6feaad302"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Alerta de risco de atraso">79f6b6e183ae875059d35fd6feaad3b9</model>
+        <model_id>79f6b6e183ae875059d35fd6feaad3b9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_79f6b6e183ae875059d35fd6feaad3b9</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:33</sys_created_on>
+        <sys_id>4af6f6e183ae875059d35fd6feaad30e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4af6f6e183ae875059d35fd6feaad30e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Alerta de risco de atraso">79f6b6e183ae875059d35fd6feaad3b9</model>
+        <model_id>79f6b6e183ae875059d35fd6feaad3b9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_79f6b6e183ae875059d35fd6feaad3b9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:32</sys_created_on>
+        <sys_id>79f6b6e183ae875059d35fd6feaad3be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=79f6b6e183ae875059d35fd6feaad3be"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Alerta de risco de atraso">79f6b6e183ae875059d35fd6feaad3b9</model>
+        <model_id>79f6b6e183ae875059d35fd6feaad3b9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_79f6b6e183ae875059d35fd6feaad3b9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:33</sys_created_on>
+        <sys_id>8af6f6e183ae875059d35fd6feaad302</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8af6f6e183ae875059d35fd6feaad302"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=79f6b6e183ae875059d35fd6feaad3b9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=79f6b6e183ae875059d35fd6feaad3b9"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=79f6b6e183ae875059d35fd6feaad3b9^sys_idNOT IN82f6f6e183ae875059d35fd6feaad35b"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Alerta de risco de atraso">79f6b6e183ae875059d35fd6feaad3b9</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:33</sys_created_on>
+        <sys_id>82f6f6e183ae875059d35fd6feaad35b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:33</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1YXW/UOhD9K1GeLtIitUJI3L5xgUIlPiRaLg98RF57krXw2nvtyW5zq/53xomz6yZZCNBQEH3azdjxnJk5Z2zn3UWKVhYF2BPtkGkOp5U7EelRms5Sxeag6O8ZmyugZ6kRrGbqrFoBmdGbM82WfkzACrQAjc2rfGEkh+fS0fO7D7N0ybRgaGyVHqEtYZbm1izPYLlSDGmtnClHRmMF2PTo8OBgltbrBie04Jqp0j+fZ38f3n9weD9zS2YxU6bIyKmFgnkQ0tGC1b9j5vKFVMKCbvCtmCV/6L1f9OLuQMGB8ANywg3n6BMhtkFFoQeLBSZeaVVFU86d/B/q90sHWZTMMCM/XZjNa8iBEHM4lrp2FwaV4UxtnxhSReclgqNYLi+3WTmWoEJhHbdyhQ85ynWb/MvZGCa8LnXydgE6eePAJnV5e7QolBSQqWZsPC3aQL/Gi5oIEbRQHFvqbEPIMsqfbb23pOlTYxwBBsP9kkMcSMGvSo2UibUvs8+j12Q6FVdOwTlp/C+i1EWfMQ0rvsKWCwoU/it9jHUy8raU9WKswUfm58G9z2LiMeTGNvU72U1sMfkXTpasCJQgDwo4RhXK6c3o6YWk1yiEXR72gNJGZ2OAvTT67s/ENTe4iMG0OP4h+5UEETP3gXM/iO77dN+VnduyaX01to7Sg/Vb1N4n7H7n2KHwn6z2XJkNkei6Bc501aOs9yQ1sbRKuCFn5ziZZEgeUFhTarEPxdUZ0+iW8U9fBrGbkfwlIGelwjs3LVSPjdpgrNE4jq5S47GRet1RbtDtrTp3qXqlkych6KQ+2brrFmqNvENPaqO8tJQOrLeUNu0JtggmEq0f72OhnTcC1B7ob1QjdFDYcnGnkxZ/RyKteaQ6Bku+1/etWJrMPTJaSGxOYV19tENukrtNKA2PALSEsNJxkzG0zJn35cHBPcEUmo+x+dGzhy+fPjn9yCjiMCcossOiH1prBPXiBA6EhAO5nIxr4WvD91JtwzS6DCktQmQR4m2zWxoB6nHEhMAv2n9WJbr0MuIJ6W37GWHKe/lEF62hcxhdHfwZzN+BJ+vlRkNm8sErlMyTkBzqcPMqwQUQJkX7P61co5pui9HGF7QL7bFJaCCxPwXc9dyk6g8Y/etUU+5O62iM3/zpZP9NquP8dg/ape+smXXdMi61JHPGF0wXzQms5e4xqRkYXyTNlKSZMqGueefDCJ/OGazBVr1gvTEpV8JLZSrPTG1Y5Xrti7qDbxThLEoGkoRuRHBjLaHduxydARCKKuoGoViddhCsI/vBjtD7/f0uDWC83j98BtTOWbZkGQAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=79f6b6e183ae875059d35fd6feaad3b9^sys_idNOT IN82f6f6e183ae875059d35fd6feaad33e,8ef6f6e183ae875059d35fd6feaad33f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Alerta de risco de atraso">79f6b6e183ae875059d35fd6feaad3b9</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>1d607f69-ccc5-4ec6-b566-a5bde31a1d4a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:33</sys_created_on>
+        <sys_id>82f6f6e183ae875059d35fd6feaad33e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:33</sys_updated_on>
+        <ui_id>f31f18cf-43d3-43a8-92c7-e7929bddc040</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Y3U4jNxR+FWuuWikKk4QEwh2FoiKxbLVQerFdjc7YnsStxx5sDxAQ77JVLyr1vk/Ai/V4xgmTkIa/RWJbbpb1Gfuc7xx/n4+dj1eRgpxHW5GDVPKkGrSiM5ClN14kw05/s9NPbA7GJVKPEq6c4SPASUzYQsLk5CFzCzDo2XETbV1FdCwkM1xFWx8/tSLBcHFnuBkP0mwdNuJetxfHm93hMO0Ns3hzYxh32Dq6kJByiVOPPVAcL8PtJsVS20FzLTmsP2jDPJ5OK+IXjivGEUgG0vJWlINi4LSZzCyGA3uvJBqcKXE8Fsp5h2NOHJgRd8Rwih6JC/ByuLDiEtFsxn51xjFh6sFFjWESalibs11wcIT+qStNmErHWlBu61IxnkEp3U7TVk94XzihVb2kRlCv1rLM1WFdqWjmYLplaCktguCFT98nFLLNjsb6/MMU5Z5QVaXCR6kpyNkInDMiLZ3HcxVxyXN0lORQFEKNksLoM1EtRix5eyRx0M6kPsegVoxUG6gH3sZqQ3sP7buV+QSM8Fm8Qze4GEliE0uNKKa5VcGj61ZkJ3ZHgrW3OWJxk9PSI6wzDrkldXn8ksrRNgY+4yGN69ZMB+eALEUG/5bwHIRsiKFzl/OeCw9gdzwYpOkg7W/0btk9pBnbSLMBbNBeg937isqScfLzFMYt0+8iC3RPtZYc1CLXEdvaXlWnGde7j+R6MASy1yQjThPcFjkhQGaQvNGhFipk+D9wRFhise5tcqyJCFk1VrTIRJckL63DaQ6/zMmo3VTQ+utVUCBAsO4uZcdXIbGXkBKME1umv3LqGiraduhQXMLNnzd/IDHyQhsHynFidWrw3xJIaBvk6uqnAlFzlnTatDTGs0mVecrN9fVdLX45x/fJuc9WNStOG3I+muW/rCZBvxa3V40W5Hs0NQbpDlZLt+5Kd5Tb6ELx61XR/1wkqWaThkJ+KeO4R8fd6i//0fBLYPob+JZQKdAxb9UT1qYz6mFRD/Z9bJEJCrm2pMyBwL/pwnAJFJMGBuTmc1Mg7RChWBLgUFuLE09LUXDCUCXU4Tle5sQISzXxh7wzYDVRMOeSfG9dhQlwAwpQY+QuNhJiBeKrseFarDJ2Ei9AkgslcsRtiK/uacmNB4/7pFfBO9H05i9SaI9jGsgQTTC4K+2sGBiazeFDJLMwufbcWRmmroJGuAE71Vh2VYK5+X0+w2YMTpQ+A9vckr+5b5OmSh81qJVIRQUQp6HPTJucI3wv9AoUQZdYX2X9NvJVELfxsMDttdW6KWlSs9aciiePVqPacuSv7eRAj4R1glrSb8fBe3PWfMC7p/Abed/I+3LkJV+avfe1eljZ6rNuo9V/V5/id4710OTHLpcLLf6H43cHtw1+42l381mHH/T7vcFbi3/2U7M4Z11mdFGE3Kpb/Et0/vql02j8S66lyy66D6Dt+kraUjb3c0r17PowBbMILtCXaVpW5RZsgcW74QvZ370lc/ysh+a2tZoKrIRtPCrPhRvjQbfkfdjrztMeX5ui4thy+u/ffn4FMqgv7o9QQXbEwdDxnuDSb3X9bokW1UElzkoWOBkepK/lctz4me4h12SnV2ulXfEkCReNZcp52KJ7n3+rf6uEprj0XEeoMnjMo6/39uh7BR2BcYmXuYoQL9cNkB6UPumwZyv5yOMGH3d25vhYBXwMH9efeUd5I+RXRcj0iYzsrP6BbNC8NS9QMn00J/tvnPyPc/LTP0zlXNemHAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=82f6f6e183ae875059d35fd6feaad33e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Alerta de risco de atraso">79f6b6e183ae875059d35fd6feaad3b9</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>1d607f69-ccc5-4ec6-b566-a5bde31a1d4a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:33</sys_created_on>
+        <sys_id>8ef6f6e183ae875059d35fd6feaad33f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:33</sys_updated_on>
+        <ui_id>fd229ae1-8cd8-4dca-a9b1-56f4c35bb7c6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTU8bMRD9Kyufo9UugQhyq6CcWlCh5UKJNVnPJlb9sbW9gRDlv3e8Xpa0ELWVekFqbvNm3vjNs3dyu2EGNLIpCzBXyLtgxFag2gg+8JPy6Lg84l6DC1zZBQ8Oqm/SLKhKSN8oWN/8UXEDjnoHdGy6YdVSKuHQsOnt3YhJQexJicXRSTmpxuV4fFAUB8eH5XwynpcHYgyIh9RCwRwVlX6OUil+TXlYN69iH3a52UVKWCeinmLE8CGgEUhCalAeR0yDERCsW7NpcC0BDkFcGrUeKpbSBGrIYu2Dl4907HER62qkySpMuSHkvVsJrs8gwDV1rkLr+tJqaWWFPnkisIZWhdNdLBVcNkFakyjdmD3bqlabi2QJGxo8XQ4hrScR2MQ5o/J+jPp6ae+vnlSeS9NZ0ieVrUANEYTg5LwNUc+GoUJNjbiGpqEr5o2zK9mRSYvOF4qCvFb2ng71cmFyqKLwnGyF/Jzwsw6+ASfjFB+pDZG3I+bX/lSB98+zkIn8exuVpMn6GXiyIVIqJ5vwjg5YYS93Oxqedvea/c6zJq7DBXxti2IsNpsvDWlCwcu8ah3ZELbbWVTJIdCh8hEqsHtrczJZ6p9qiW7synIfCPT7mSlP1Z3NiZv6JM6VDZChzoD8bMAsIfptZ2QnjTtoOlWSYMyMDbImWNgM2mA1BAp0l/J27jCzmZO+spnADOjD9DafWScXqF/O6aUPqGH2/tPLz/y/eX9j3m/XnsDiZO/aK+c7a+9cohL+ee8Nz/pp56GmewrI0zP/Ze/1yeymT/a7r/xXu6+cFN3vDW3ANNybX4A7/3V7VuHdD4WNbjPnBwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8ef6f6e183ae875059d35fd6feaad33f"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=79f6b6e183ae875059d35fd6feaad3b9"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=79f6b6e183ae875059d35fd6feaad3b9^sys_idNOT INc6f6f6e183ae875059d35fd6feaad33b"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">39f6b6e183ae875059d35fd6feaad340</block>
+        <comment>Verificar se o e-mail do cliente está preenchido</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Alerta de risco de atraso">79f6b6e183ae875059d35fd6feaad3b9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:33</sys_created_on>
+        <sys_id>c6f6f6e183ae875059d35fd6feaad33b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:33</sys_updated_on>
+        <ui_id>1d607f69-ccc5-4ec6-b566-a5bde31a1d4a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VUW/aMBD+K5OfUZQAyQZvFR0SUlumwSpNUxVdbAesOXZmO9As4r/vnASoVqZ23evecp/vzt93uS9piK5cWTm71lfWio0i028PAyKUx/C5IQoKTqaEasWEE1qRAdmBrDzWNF9KBo6zNApoZQxXLuAFCJlSKTDgh8Nidbdcf7z9tP6KdUzYUkJ9/8ZyuhWSYVZHsQSDzBw3ZNr8diQYdp9AnMdRGNPRMBkNw3D4YRxlySiLhmwEfJxgQwkZl5g6e6LtglxXlx6yzgi16eObvnR1BLVhnsowHBD+6LhiHEnkIC0fkAIU6tSmJlNnKgQMB7ZUsj5lbIVy2I343EcrfnLfKQx9Zs5RF+Xd6SlM+1l2cH4NDpBKRV1l+lS61YJy202E8Rwq6WZPsS5hWbYq2xIHmTxWa1kV6q4bBjk1OL46RCqLJHjplXruvZB8tdX7z0eWc6HaqfSHUlOQpwgczi6rnOfTEC55gY3SAsoSJ5qWRu9EW4xcimAjMQhyqfd4qd/TAKgnHuBgIZgjft3C92CEV3GLbbAYd8GmlhpRHrW1l5PDgNjaziRYe9aIw01/VJ5hp7jXlnbj8SVtoyu8eMd7GYdBQzyrG70RdKGsA5S9qu3Cr2DEkvB9nkwopfGY0ySLkwTijPFRBBEbA+lXNQ8hjyY0uryqMLqwlmkLnK343F3kZYu84t5nFnnXbf6fGf2NW6IX3NIjr7JLHP93yz+7xdPMwAqatn8AbOc/WG+0Sz/0ueCSXVyhS3568DvdsTq9DSoslq09tjj+mPxBjSvnXXeG9tp897LP2OEX8Z0qvOIGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=79f6b6e183ae875059d35fd6feaad3b9"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=79f6b6e183ae875059d35fd6feaad3b9"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_79f6b6e183ae875059d35fd6feaad3b9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:33</sys_created_on>
+        <sys_id>02f6f6e183ae875059d35fd6feaad30a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_79f6b6e183ae875059d35fd6feaad3b9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:33</sys_created_on>
+        <sys_id>8ef6f6e183ae875059d35fd6feaad321</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_79f6b6e183ae875059d35fd6feaad3b9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:32</sys_created_on>
+        <sys_id>b1f6b6e183ae875059d35fd6feaad3d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_79f6b6e183ae875059d35fd6feaad3b9"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_79f6b6e183ae875059d35fd6feaad3b9"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>f43732e3d1d2469ea30ad234b5aa1183</sys_id>
+        <latest_snapshot>79f6b6e183ae875059d35fd6feaad3b9</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=f43732e3d1d2469ea30ad234b5aa1183^sys_idNOT INdaf6f6e183ae875059d35fd6feaad3a9"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>f43732e3d1d2469ea30ad234b5aa1183</plan_id>
+        <snapshot>79f6b6e183ae875059d35fd6feaad3b9</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-07 00:59:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>daf6f6e183ae875059d35fd6feaad3a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-07 00:59:34</sys_updated_on>
+        <trigger display_value="">92f6f6e183ae875059d35fd6feaad3a7</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=f43732e3d1d2469ea30ad234b5aa1183"/>
+</record_update>
