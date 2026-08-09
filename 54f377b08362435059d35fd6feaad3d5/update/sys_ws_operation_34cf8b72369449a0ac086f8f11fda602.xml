@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+  <sys_ws_operation action="INSERT_OR_UPDATE">
+    <sys_id>34cf8b72369449a0ac086f8f11fda602</sys_id>
+    <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
+    <sys_update_name>sys_ws_operation_34cf8b72369449a0ac086f8f11fda602</sys_update_name>
+    <active>true</active>
+    <consumes>application/json</consumes>
+    <consumes_customized>false</consumes_customized>
+    <default_operation_uri>/api/x_915815_smart_log/smart_logistics/entregas/atualizacao</default_operation_uri>
+    <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+    <http_method>POST</http_method>
+    <name>Atualizar entrega</name>
+    <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var LOG_PREFIX = '[Smart Logistics API]';
+
+    var VALID_STATUS = [
+        'pedido_criado',
+        'em_preparacao',
+        'pronto_envio',
+        'em_transporte',
+        'proximo_destino',
+        'entregue',
+        'atrasado',
+        'cancelado'
+    ];
+
+    var VALID_TIPO_OCORRENCIA = [
+        'transito_intenso',
+        'problema_veiculo',
+        'endereco_nao_localizado',
+        'cliente_ausente',
+        'condicao_climatica',
+        'atraso_separacao',
+        'falha_operacional',
+        'outro'
+    ];
+
+    var VALID_SEVERIDADE = ['baixa', 'media', 'alta', 'critica'];
+
+    try {
+        var body = request.body.data;
+
+        // Validate numero_entrega is present
+        var numeroEntrega = body.numero_entrega;
+        if (!numeroEntrega) {
+            gs.warn(LOG_PREFIX + ' Validação falhou: numero_entrega ausente');
+            response.setStatus(400);
+            response.setBody({
+                success: false,
+                error: 'numero_entrega é obrigatório.'
+            });
+            return;
+        }
+
+        gs.info(LOG_PREFIX + ' Entrega recebida: ' + numeroEntrega);
+
+        // Find the Entrega record
+        var entregaGr = new GlideRecord('x_915815_smart_log_entrega');
+        entregaGr.addQuery('number', numeroEntrega);
+        entregaGr.query();
+
+        if (!entregaGr.next()) {
+            gs.warn(LOG_PREFIX + ' Entrega não encontrada: ' + numeroEntrega);
+            response.setStatus(404);
+            response.setBody({
+                success: false,
+                error: 'Entrega não encontrada.',
+                numero_entrega: numeroEntrega
+            });
+            return;
+        }
+
+        var entregaSysId = entregaGr.getUniqueValue();
+
+        // Validate status if provided
+        var status = body.status;
+        if (status && VALID_STATUS.indexOf(status) === -1) {
+            gs.warn(LOG_PREFIX + ' Status inválido: ' + status);
+            response.setStatus(400);
+            response.setBody({
+                success: false,
+                error: 'Status inválido. Valores permitidos: ' + VALID_STATUS.join(', ')
+            });
+            return;
+        }
+
+        // Validate occurrence fields if provided
+        var ocorrencia = body.ocorrencia;
+        if (ocorrencia) {
+            if (!ocorrencia.tipo) {
+                gs.warn(LOG_PREFIX + ' Tipo de ocorrência ausente');
+                response.setStatus(400);
+                response.setBody({
+                    success: false,
+                    error: 'ocorrencia.tipo é obrigatório quando ocorrencia é fornecida.'
+                });
+                return;
+            }
+            if (VALID_TIPO_OCORRENCIA.indexOf(ocorrencia.tipo) === -1) {
+                gs.warn(LOG_PREFIX + ' Tipo de ocorrência inválido: ' + ocorrencia.tipo);
+                response.setStatus(400);
+                response.setBody({
+                    success: false,
+                    error: 'Tipo de ocorrência inválido. Valores permitidos: ' + VALID_TIPO_OCORRENCIA.join(', ')
+                });
+                return;
+            }
+            if (!ocorrencia.severidade) {
+                gs.warn(LOG_PREFIX + ' Severidade de ocorrência ausente');
+                response.setStatus(400);
+                response.setBody({
+                    success: false,
+                    error: 'ocorrencia.severidade é obrigatório quando ocorrencia é fornecida.'
+                });
+                return;
+            }
+            if (VALID_SEVERIDADE.indexOf(ocorrencia.severidade) === -1) {
+                gs.warn(LOG_PREFIX + ' Severidade inválida: ' + ocorrencia.severidade);
+                response.setStatus(400);
+                response.setBody({
+                    success: false,
+                    error: 'Severidade inválida. Valores permitidos: ' + VALID_SEVERIDADE.join(', ')
+                });
+                return;
+            }
+        }
+
+        // --- All validations passed. Create records. ---
+
+        var now = new GlideDateTime();
+
+        // Create Tracking record
+        var trackingGr = new GlideRecord('x_915815_smart_log_tracking');
+        trackingGr.initialize();
+        trackingGr.setValue('entrega', entregaSysId);
+        trackingGr.setValue('data_atualizacao', now.getValue());
+        trackingGr.setValue('origem_atualizacao', 'api');
+
+        if (status) {
+            trackingGr.setValue('novo_status', status);
+        } else {
+            trackingGr.setValue('novo_status', entregaGr.getValue('status'));
+        }
+
+        if (body.localizacao) {
+            trackingGr.setValue('localizacao_atual', body.localizacao);
+        }
+
+        var descricaoTracking = body.descricao_atualizacao || 'Atualização recebida via integração logística.';
+        trackingGr.setValue('descricao', descricaoTracking);
+
+        trackingGr.insert();
+        var trackingNumber = trackingGr.getValue('number');
+        gs.info(LOG_PREFIX + ' Tracking criado: ' + trackingNumber);
+
+        // Create Occurrence record if provided
+        var ocorrenciaNumber = '';
+        if (ocorrencia) {
+            var ocorrenciaGr = new GlideRecord('x_915815_smart_log_ocorrencia');
+            ocorrenciaGr.initialize();
+            ocorrenciaGr.setValue('entrega', entregaSysId);
+            ocorrenciaGr.setValue('tipo_ocorrencia', ocorrencia.tipo);
+            ocorrenciaGr.setValue('severidade', ocorrencia.severidade);
+            ocorrenciaGr.setValue('estado', 'aberta');
+            ocorrenciaGr.setValue('data_abertura', now.getValue());
+
+            if (ocorrencia.descricao) {
+                ocorrenciaGr.setValue('descricao', ocorrencia.descricao);
+            }
+            if (ocorrencia.tempo_adicional_minutos) {
+                ocorrenciaGr.setValue('tempo_adicional_min', ocorrencia.tempo_adicional_minutos);
+            }
+
+            ocorrenciaGr.insert();
+            ocorrenciaNumber = ocorrenciaGr.getValue('number');
+            gs.info(LOG_PREFIX + ' Ocorrência criada: ' + ocorrenciaNumber);
+        }
+
+        // Re-read Entrega to get values after Business Rules executed
+        entregaGr = new GlideRecord('x_915815_smart_log_entrega');
+        entregaGr.get(entregaSysId);
+
+        var responseBody = {
+            success: true,
+            message: ocorrencia
+                ? 'Atualização logística e ocorrência registradas com sucesso.'
+                : 'Atualização logística registrada com sucesso.',
+            entrega: numeroEntrega,
+            tracking: trackingNumber,
+            status: entregaGr.getValue('status'),
+            risco: entregaGr.getValue('risco_atraso'),
+            eta_atualizado: entregaGr.getDisplayValue('eta_atualizado')
+        };
+
+        if (ocorrenciaNumber) {
+            responseBody.ocorrencia = ocorrenciaNumber;
+        }
+
+        response.setStatus(200);
+        response.setBody(responseBody);
+    } catch (e) {
+        gs.error(LOG_PREFIX + ' Erro inesperado: ' + e.message);
+        response.setStatus(500);
+        response.setBody({
+            success: false,
+            error: 'Erro interno do servidor. Tente novamente mais tarde.'
+        });
+    }
+})(request, response);
+]]></operation_script>
+    <operation_uri>/api/x_915815_smart_log/v1/smart_logistics/entregas/atualizacao</operation_uri>
+    <produces>application/json</produces>
+    <produces_customized>false</produces_customized>
+    <relative_path>/entregas/atualizacao</relative_path>
+    <request_example>{"numero_entrega":"ENT0001042","status":"em_transporte","localizacao":"BR-040 - Contagem/MG","descricao_atualizacao":"Veículo seguindo para o destino","ocorrencia":{"tipo":"transito_intenso","severidade":"alta","tempo_adicional_minutos":90,"descricao":"Congestionamento intenso identificado na rota"}}</request_example>
+    <requires_acl_authorization>true</requires_acl_authorization>
+    <requires_authentication>true</requires_authentication>
+    <requires_snc_internal_role>true</requires_snc_internal_role>
+    <short_description>Recebe atualizações de tracking e ocorrências para entregas existentes.</short_description>
+    <sys_policy/>
+    <web_service_definition>576488349a4f4b8bb3e6b0d47c81ff7d</web_service_definition>
+    <web_service_version>f27923e14fe345bb88f1b2880d5ca8d8</web_service_version>
+  </sys_ws_operation>
+</record_update>

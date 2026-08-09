@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+  <sys_ws_definition action="INSERT_OR_UPDATE">
+    <sys_id>576488349a4f4b8bb3e6b0d47c81ff7d</sys_id>
+    <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
+    <sys_update_name>sys_ws_definition_576488349a4f4b8bb3e6b0d47c81ff7d</sys_update_name>
+    <active>true</active>
+    <base_uri>/api/x_915815_smart_log/smart_logistics</base_uri>
+    <consumes>application/json</consumes>
+    <consumes_customized>true</consumes_customized>
+    <default_version>v1</default_version>
+    <doc_link/>
+    <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+    <is_versioned>true</is_versioned>
+    <name>Smart Logistics Integration API</name>
+    <namespace>x_915815_smart_log</namespace>
+    <produces>application/json</produces>
+    <produces_customized>true</produces_customized>
+    <service_id>smart_logistics</service_id>
+    <short_description>API de integração para recebimento de atualizações logísticas de sistemas externos e transportadoras.</short_description>
+    <sys_policy/>
+  </sys_ws_definition>
+</record_update>

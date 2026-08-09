@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_version">
+  <sys_ws_version action="INSERT_OR_UPDATE">
+    <sys_id>f27923e14fe345bb88f1b2880d5ca8d8</sys_id>
+    <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
+    <sys_update_name>sys_ws_version_f27923e14fe345bb88f1b2880d5ca8d8</sys_update_name>
+    <active>true</active>
+    <deprecated>false</deprecated>
+    <is_default>true</is_default>
+    <short_description>Versão estável da API de integração logística.</short_description>
+    <version>1</version>
+    <version_id>v1</version_id>
+    <web_service_definition>576488349a4f4b8bb3e6b0d47c81ff7d</web_service_definition>
+  </sys_ws_version>
+</record_update>
