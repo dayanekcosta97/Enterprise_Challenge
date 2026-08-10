@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="estado" table="x_915815_smart_log_ocorrencia" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>estado</element>
+            <name>x_915815_smart_log_ocorrencia</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-04 21:46:52</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>estado</sys_name>
+            <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+            <sys_update_name>sys_choice_x_915815_smart_log_ocorrencia_estado</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-04 21:46:52</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>estado</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Aberta</label>
+            <language>en</language>
+            <name>x_915815_smart_log_ocorrencia</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-09 20:50:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-09 20:50:03</sys_updated_on>
+            <value>aberta</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>estado</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Em análise</label>
+            <language>en</language>
+            <name>x_915815_smart_log_ocorrencia</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-09 20:50:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-09 20:50:03</sys_updated_on>
+            <value>em_analise</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>estado</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Resolvida</label>
+            <language>en</language>
+            <name>x_915815_smart_log_ocorrencia</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-09 20:50:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-09 20:50:03</sys_updated_on>
+            <value>resolvida</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>estado</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cancelada</label>
+            <language>en</language>
+            <name>x_915815_smart_log_ocorrencia</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-09 20:50:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-09 20:50:03</sys_updated_on>
+            <value>cancelada</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

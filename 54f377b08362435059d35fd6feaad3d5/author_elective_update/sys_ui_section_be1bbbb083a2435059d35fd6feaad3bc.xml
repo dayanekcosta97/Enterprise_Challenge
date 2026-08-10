@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_ui_section action="DELETE" caption="" section_id="be1bbbb083a2435059d35fd6feaad3bc" sys_domain="global" table="x_915815_smart_log_entrega" view="NULL">
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.begin_split</element>
+      <position>0</position>
+      <sys_id>be1bbbb083a2435059d35fd6feaad3c7</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.begin_split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>number</element>
+      <position>1</position>
+      <sys_id>7a1bbbb083a2435059d35fd6feaad3c9</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>numero_pedido</element>
+      <position>2</position>
+      <sys_id>361bbbb083a2435059d35fd6feaad3ca</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.split</element>
+      <position>3</position>
+      <sys_id>fe1bbbb083a2435059d35fd6feaad3ca</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>status</element>
+      <position>4</position>
+      <sys_id>ba1bbbb083a2435059d35fd6feaad3cb</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>ativo</element>
+      <position>5</position>
+      <sys_id>761bbbb083a2435059d35fd6feaad3cc</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.end_split</element>
+      <position>6</position>
+      <sys_id>321bbbb083a2435059d35fd6feaad3cd</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.end_split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>email_cliente</element>
+      <position>7</position>
+      <sys_id>fa1bbbb083a2435059d35fd6feaad3cd</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.begin_split</element>
+      <position>8</position>
+      <sys_id>b61bbbb083a2435059d35fd6feaad3ce</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.begin_split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>eta_atualizado</element>
+      <position>9</position>
+      <sys_id>721bbbb083a2435059d35fd6feaad3cf</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>origem</element>
+      <position>10</position>
+      <sys_id>3e1bbbb083a2435059d35fd6feaad3cf</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>risco_atraso</element>
+      <position>11</position>
+      <sys_id>f61bbbb083a2435059d35fd6feaad3d0</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.split</element>
+      <position>12</position>
+      <sys_id>b21bbbb083a2435059d35fd6feaad3d1</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>distancia_km</element>
+      <position>13</position>
+      <sys_id>7e1bbbb083a2435059d35fd6feaad3d1</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>ultima_atualizacao</element>
+      <position>14</position>
+      <sys_id>3a1bbbb083a2435059d35fd6feaad3d2</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.end_split</element>
+      <position>15</position>
+      <sys_id>f21bbbb083a2435059d35fd6feaad3d3</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.end_split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>observacoes</element>
+      <position>16</position>
+      <sys_id>be1bbbb083a2435059d35fd6feaad3d3</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>destino</element>
+      <position>17</position>
+      <sys_id>7a1bbbb083a2435059d35fd6feaad3d4</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>motivo_risco</element>
+      <position>18</position>
+      <sys_id>361bbbb083a2435059d35fd6feaad3d5</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.begin_split</element>
+      <position>19</position>
+      <sys_id>fe1bbbb083a2435059d35fd6feaad3d5</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.begin_split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>transportadora</element>
+      <position>20</position>
+      <sys_id>ba1bbbb083a2435059d35fd6feaad3d6</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>prioridade</element>
+      <position>21</position>
+      <sys_id>761bbbb083a2435059d35fd6feaad3d7</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>cliente</element>
+      <position>22</position>
+      <sys_id>321bbbb083a2435059d35fd6feaad3d8</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.split</element>
+      <position>23</position>
+      <sys_id>fa1bbbb083a2435059d35fd6feaad3d8</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>previsao_original</element>
+      <position>24</position>
+      <sys_id>b61bbbb083a2435059d35fd6feaad3d9</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>telefone_cliente</element>
+      <position>25</position>
+      <sys_id>721bbbb083a2435059d35fd6feaad3da</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>data_real_entrega</element>
+      <position>26</position>
+      <sys_id>3e1bbbb083a2435059d35fd6feaad3da</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.end_split</element>
+      <position>27</position>
+      <sys_id>f61bbbb083a2435059d35fd6feaad3db</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.end_split</type>
+    </sys_ui_element>
+    <sys_ui_section action="DELETE">
+      <caption/>
+      <header>false</header>
+      <name>x_915815_smart_log_entrega</name>
+      <roles/>
+      <sys_domain>global</sys_domain>
+      <sys_id>be1bbbb083a2435059d35fd6feaad3bc</sys_id>
+      <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
+      <sys_user/>
+      <title>true</title>
+      <view_name/>
+      <view display_value="NULL" name="NULL">805b799c9923462394c9a28971ace94b</view>
+    </sys_ui_section>
+  </sys_ui_section>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</application>
+        <file_path/>
+        <instance_id>5d1ee59ddbc64e10ebdd2a591396196e</instance_id>
+        <instance_name>dev264995</instance_name>
+        <name>sys_ui_section_be1bbbb083a2435059d35fd6feaad3bc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_ui_section caption="" section_id="be1bbbb083a2435059d35fd6feaad3bc" sys_domain="global" table="x_915815_smart_log_entrega" view="NULL">
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.begin_split</element>
+      <position>0</position>
+      <sys_id>be1bbbb083a2435059d35fd6feaad3c7</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.begin_split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>number</element>
+      <position>1</position>
+      <sys_id>7a1bbbb083a2435059d35fd6feaad3c9</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>numero_pedido</element>
+      <position>2</position>
+      <sys_id>361bbbb083a2435059d35fd6feaad3ca</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.split</element>
+      <position>3</position>
+      <sys_id>fe1bbbb083a2435059d35fd6feaad3ca</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>status</element>
+      <position>4</position>
+      <sys_id>ba1bbbb083a2435059d35fd6feaad3cb</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>ativo</element>
+      <position>5</position>
+      <sys_id>761bbbb083a2435059d35fd6feaad3cc</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.end_split</element>
+      <position>6</position>
+      <sys_id>321bbbb083a2435059d35fd6feaad3cd</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.end_split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>email_cliente</element>
+      <position>7</position>
+      <sys_id>fa1bbbb083a2435059d35fd6feaad3cd</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.begin_split</element>
+      <position>8</position>
+      <sys_id>b61bbbb083a2435059d35fd6feaad3ce</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.begin_split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>eta_atualizado</element>
+      <position>9</position>
+      <sys_id>721bbbb083a2435059d35fd6feaad3cf</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>origem</element>
+      <position>10</position>
+      <sys_id>3e1bbbb083a2435059d35fd6feaad3cf</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>risco_atraso</element>
+      <position>11</position>
+      <sys_id>f61bbbb083a2435059d35fd6feaad3d0</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.split</element>
+      <position>12</position>
+      <sys_id>b21bbbb083a2435059d35fd6feaad3d1</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>distancia_km</element>
+      <position>13</position>
+      <sys_id>7e1bbbb083a2435059d35fd6feaad3d1</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>ultima_atualizacao</element>
+      <position>14</position>
+      <sys_id>3a1bbbb083a2435059d35fd6feaad3d2</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.end_split</element>
+      <position>15</position>
+      <sys_id>f21bbbb083a2435059d35fd6feaad3d3</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.end_split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>observacoes</element>
+      <position>16</position>
+      <sys_id>be1bbbb083a2435059d35fd6feaad3d3</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>destino</element>
+      <position>17</position>
+      <sys_id>7a1bbbb083a2435059d35fd6feaad3d4</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>motivo_risco</element>
+      <position>18</position>
+      <sys_id>361bbbb083a2435059d35fd6feaad3d5</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.begin_split</element>
+      <position>19</position>
+      <sys_id>fe1bbbb083a2435059d35fd6feaad3d5</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.begin_split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>transportadora</element>
+      <position>20</position>
+      <sys_id>ba1bbbb083a2435059d35fd6feaad3d6</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>prioridade</element>
+      <position>21</position>
+      <sys_id>761bbbb083a2435059d35fd6feaad3d7</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>cliente</element>
+      <position>22</position>
+      <sys_id>321bbbb083a2435059d35fd6feaad3d8</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.split</element>
+      <position>23</position>
+      <sys_id>fa1bbbb083a2435059d35fd6feaad3d8</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.split</type>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>previsao_original</element>
+      <position>24</position>
+      <sys_id>b61bbbb083a2435059d35fd6feaad3d9</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>telefone_cliente</element>
+      <position>25</position>
+      <sys_id>721bbbb083a2435059d35fd6feaad3da</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>data_real_entrega</element>
+      <position>26</position>
+      <sys_id>3e1bbbb083a2435059d35fd6feaad3da</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_element action="INSERT_OR_UPDATE">
+      <element>.end_split</element>
+      <position>27</position>
+      <sys_id>f61bbbb083a2435059d35fd6feaad3db</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="" display_value="" name="x_915815_smart_log_entrega" sys_domain="global" view="805b799c9923462394c9a28971ace94b">be1bbbb083a2435059d35fd6feaad3bc</sys_ui_section>
+      <sys_user/>
+      <type>.end_split</type>
+    </sys_ui_element>
+    <sys_ui_section action="INSERT_OR_UPDATE">
+      <caption/>
+      <header>false</header>
+      <name>x_915815_smart_log_entrega</name>
+      <roles/>
+      <sys_domain>global</sys_domain>
+      <sys_id>be1bbbb083a2435059d35fd6feaad3bc</sys_id>
+      <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
+      <sys_user/>
+      <title>true</title>
+      <view_name/>
+      <view display_value="NULL" name="NULL">805b799c9923462394c9a28971ace94b</view>
+    </sys_ui_section>
+  </sys_ui_section>
+</record_update>]]></payload>
+        <payload_hash>1974223432</payload_hash>
+        <record_name>Entrega</record_name>
+        <reverted_from/>
+        <source>a92e3b7883a2435059d35fd6feaad326</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 22:15:15</sys_created_on>
+        <sys_id>b32e3f7883a2435059d35fd6feaad3e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fced8619f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 22:15:15</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>fb2e3f78d3a243500b37f80c89cf69e1</update_guid>
+        <update_guid_history>fb2e3f78d3a243500b37f80c89cf69e1:0,031bbbb07ea2435074e862448c82dfe1:1607594029,3e1bbbb087a2435050255e26b6613bc2:90002041</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-06 01:40:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>2951cc2b95d445acab5238d90ee5b689</sys_id>
+        <sys_metadata>be1bbbb083a2435059d35fd6feaad3bc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_915815_smart_log_entrega</sys_name>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_parent display_value="Smart Log Entrega">0cb77bb88362435059d35fd6feaad3de</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_scope_delete display_value="">40ed0a20b0304dd890f53fc6612aa190</sys_scope_delete>
+        <sys_update_name>sys_ui_section_be1bbbb083a2435059d35fd6feaad3bc</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_be1bbbb083a2435059d35fd6feaad3bc">b32e3f7883a2435059d35fd6feaad3e2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-06 01:40:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

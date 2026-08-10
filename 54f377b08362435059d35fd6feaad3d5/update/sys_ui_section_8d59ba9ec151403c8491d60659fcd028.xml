@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Análise de risco" section_id="8d59ba9ec151403c8491d60659fcd028" sys_domain="global" table="x_915815_smart_log_entrega" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-04 22:15:14</sys_created_on>
+            <sys_id>a62f6cb52583436bb56d3d6764ced2e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Análise de risco" display_value="Análise de risco" name="x_915815_smart_log_entrega" sys_domain="global" view="Default view">8d59ba9ec151403c8491d60659fcd028</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-04 22:15:14</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>risco_atraso</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-04 22:15:14</sys_created_on>
+            <sys_id>6b48b5b5d61a4281984a1b969c40794b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Análise de risco" display_value="Análise de risco" name="x_915815_smart_log_entrega" sys_domain="global" view="Default view">8d59ba9ec151403c8491d60659fcd028</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-04 22:15:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ativo</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-04 22:15:14</sys_created_on>
+            <sys_id>39189e9278ed4b8e9664e5019c7ac729</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Análise de risco" display_value="Análise de risco" name="x_915815_smart_log_entrega" sys_domain="global" view="Default view">8d59ba9ec151403c8491d60659fcd028</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-04 22:15:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-04 22:15:14</sys_created_on>
+            <sys_id>2d9438e27ca640a397a7e5c00196cf3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Análise de risco" display_value="Análise de risco" name="x_915815_smart_log_entrega" sys_domain="global" view="Default view">8d59ba9ec151403c8491d60659fcd028</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-04 22:15:14</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>motivo_risco</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-04 22:15:14</sys_created_on>
+            <sys_id>876e4fc59c4f445aba0885ac0e0eb1b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Análise de risco" display_value="Análise de risco" name="x_915815_smart_log_entrega" sys_domain="global" view="Default view">8d59ba9ec151403c8491d60659fcd028</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-04 22:15:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-04 22:15:14</sys_created_on>
+            <sys_id>c4b213c337454809a5627682d5b227a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Análise de risco" display_value="Análise de risco" name="x_915815_smart_log_entrega" sys_domain="global" view="Default view">8d59ba9ec151403c8491d60659fcd028</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-04 22:15:14</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>observacoes</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-04 22:15:14</sys_created_on>
+            <sys_id>8117465132574d71acaefcdfefcbf38a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Análise de risco" display_value="Análise de risco" name="x_915815_smart_log_entrega" sys_domain="global" view="Default view">8d59ba9ec151403c8491d60659fcd028</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-04 22:15:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Análise de risco</caption>
+            <header>false</header>
+            <name>x_915815_smart_log_entrega</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-04 22:15:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8d59ba9ec151403c8491d60659fcd028</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_915815_smart_log_entrega</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+            <sys_update_name>sys_ui_section_8d59ba9ec151403c8491d60659fcd028</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-04 22:15:14</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

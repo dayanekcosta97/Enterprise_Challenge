@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[{
+  "name": "x-915815-smart-logistics-5-0",
+  "version": "1.0.0",
+  "description": "[BUILD AGENT GENERATED]:  Aplicação MVP para gestão inteligente de entregas, rastreamento de remessas, predição de atrasos e comunicação proativa com clientes.",
+  "license": "UNLICENSED",
+  "imports": {
+    "#now:*": "./@types/servicenow/fluent/*/index.js"
+  },
+  "scripts": {
+    "build": "now-sdk build",
+    "deploy": "now-sdk install",
+    "transform": "now-sdk transform",
+    "types": "now-sdk dependencies"
+  },
+  "devDependencies": {
+    "@servicenow/sdk": "4.9.2",
+    "@servicenow/glide": "27.0.5"
+  }
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_915815_smart_log/x-915815-smart-logistics-5-0/1.0.0/package.json</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 21:47:00</sys_created_on>
+        <sys_id>818a1e0e02a14f93a7ea6071604a8a1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_915815_smart_log/x-915815-smart-logistics-5-0/1.0.0/package.json</sys_name>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name>sys_module_818a1e0e02a14f93a7ea6071604a8a1b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 21:47:00</sys_updated_on>
+    </sys_module>
+</record_update>

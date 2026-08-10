@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[import { GlideRecord, GlideDateTime } from '@servicenow/glide';
+export function updateEntregaFromTracking(current) {
+    var entregaSysId = current.getValue('entrega');
+    var novoStatus = current.getValue('novo_status');
+    if (entregaSysId && novoStatus) {
+        var gr = new GlideRecord('x_915815_smart_log_entrega');
+        if (gr.get(entregaSysId)) {
+            gr.setValue('status', novoStatus);
+            var now = new GlideDateTime();
+            gr.setValue('ultima_atualizacao', now.getValue());
+            gr.update();
+        }
+    }
+}
+]]></content>
+        <external_source>false</external_source>
+        <path>x_915815_smart_log/x-915815-smart-logistics-5-0/1.0.0/src/server/business-rules/update-entrega-from-tracking.ts</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 21:47:00</sys_created_on>
+        <sys_id>1fb460c6a89842fda60dd5a99779e4c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_915815_smart_log/x-915815-smart-logistics-5-0/1.0.0/src/server/business-rules/update-entrega-from-tracking.ts</sys_name>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name>sys_module_1fb460c6a89842fda60dd5a99779e4c6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 21:47:00</sys_updated_on>
+    </sys_module>
+</record_update>

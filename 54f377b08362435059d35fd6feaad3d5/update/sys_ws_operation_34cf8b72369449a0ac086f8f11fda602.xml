@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
-  <sys_ws_operation action="INSERT_OR_UPDATE">
-    <sys_id>34cf8b72369449a0ac086f8f11fda602</sys_id>
-    <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
-    <sys_update_name>sys_ws_operation_34cf8b72369449a0ac086f8f11fda602</sys_update_name>
-    <active>true</active>
-    <consumes>application/json</consumes>
-    <consumes_customized>false</consumes_customized>
-    <default_operation_uri>/api/x_915815_smart_log/smart_logistics/entregas/atualizacao</default_operation_uri>
-    <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
-    <http_method>POST</http_method>
-    <name>Atualizar entrega</name>
-    <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/x_915815_smart_log/smart_logistics/entregas/atualizacao</default_operation_uri>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Atualizar entrega</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
     var LOG_PREFIX = '[Smart Logistics API]';
 
     var VALID_STATUS = [
@@ -208,17 +205,29 @@
     }
 })(request, response);
 ]]></operation_script>
-    <operation_uri>/api/x_915815_smart_log/v1/smart_logistics/entregas/atualizacao</operation_uri>
-    <produces>application/json</produces>
-    <produces_customized>false</produces_customized>
-    <relative_path>/entregas/atualizacao</relative_path>
-    <request_example>{"numero_entrega":"ENT0001042","status":"em_transporte","localizacao":"BR-040 - Contagem/MG","descricao_atualizacao":"Veículo seguindo para o destino","ocorrencia":{"tipo":"transito_intenso","severidade":"alta","tempo_adicional_minutos":90,"descricao":"Congestionamento intenso identificado na rota"}}</request_example>
-    <requires_acl_authorization>true</requires_acl_authorization>
-    <requires_authentication>true</requires_authentication>
-    <requires_snc_internal_role>true</requires_snc_internal_role>
-    <short_description>Recebe atualizações de tracking e ocorrências para entregas existentes.</short_description>
-    <sys_policy/>
-    <web_service_definition>576488349a4f4b8bb3e6b0d47c81ff7d</web_service_definition>
-    <web_service_version>f27923e14fe345bb88f1b2880d5ca8d8</web_service_version>
-  </sys_ws_operation>
+        <operation_uri>/api/x_915815_smart_log/v1/smart_logistics/entregas/atualizacao</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/entregas/atualizacao</relative_path>
+        <request_example>{"numero_entrega":"ENT0001042","status":"em_transporte","localizacao":"BR-040 - Contagem/MG","descricao_atualizacao":"Veículo seguindo para o destino","ocorrencia":{"tipo":"transito_intenso","severidade":"alta","tempo_adicional_minutos":90,"descricao":"Congestionamento intenso identificado na rota"}}</request_example>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description>Recebe atualizações de tracking e ocorrências para entregas existentes.</short_description>
+        <support_trailing_slash>false</support_trailing_slash>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-09 20:50:09</sys_created_on>
+        <sys_id>34cf8b72369449a0ac086f8f11fda602</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Atualizar entrega</sys_name>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name>sys_ws_operation_34cf8b72369449a0ac086f8f11fda602</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-09 20:50:09</sys_updated_on>
+        <web_service_definition display_value="Smart Logistics Integration API">576488349a4f4b8bb3e6b0d47c81ff7d</web_service_definition>
+        <web_service_version display_value="v1">f27923e14fe345bb88f1b2880d5ca8d8</web_service_version>
+    </sys_ws_operation>
 </record_update>

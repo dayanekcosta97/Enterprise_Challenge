@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="48b77bb88362435059d35fd6feaad351" label="Ocorrência Logística" max_length="40" name="x_915815_smart_log_ocorrencia" type="collection">
+        <element label="Tempo adicional estimado em minutos" max_length="40" name="tempo_adicional_min" type="integer"/>
+        <element label="Data de resolução" max_length="40" name="data_resolucao" type="glide_date_time"/>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="3" label="Tipo da ocorrência" mandatory="true" max_length="40" name="tipo_ocorrencia" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Outro" sequence="8" value="outro"/>
+                <element inactive_on_update="false" label="Trânsito intenso" sequence="1" value="transito_intenso"/>
+                <element inactive_on_update="false" label="Problema no veículo" sequence="2" value="problema_veiculo"/>
+                <element inactive_on_update="false" label="Endereço não localizado" sequence="3" value="endereco_nao_localizado"/>
+                <element inactive_on_update="false" label="Falha operacional" sequence="7" value="falha_operacional"/>
+                <element inactive_on_update="false" label="Cliente ausente" sequence="4" value="cliente_ausente"/>
+                <element inactive_on_update="false" label="Atraso na separação" sequence="6" value="atraso_separacao"/>
+                <element inactive_on_update="false" label="Condição climática" sequence="5" value="condicao_climatica"/>
+            </choice>
+        </element>
+        <element label="Descrição" max_length="4000" name="descricao" type="multi_two_lines"/>
+        <element label="Responsável" max_length="32" name="responsavel" reference="sys_user" type="reference"/>
+        <element choice="3" label="Severidade" mandatory="true" max_length="40" name="severidade" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Alta" sequence="3" value="alta"/>
+                <element inactive_on_update="false" label="Crítica" sequence="4" value="critica"/>
+                <element inactive_on_update="false" label="Baixa" sequence="1" value="baixa"/>
+                <element inactive_on_update="false" label="Média" sequence="2" value="media"/>
+            </choice>
+        </element>
+        <element label="Data de abertura" mandatory="true" max_length="40" name="data_abertura" type="glide_date_time"/>
+        <element choice="3" label="Estado" mandatory="true" max_length="40" name="estado" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Em análise" sequence="2" value="em_analise"/>
+                <element inactive_on_update="false" label="Aberta" sequence="1" value="aberta"/>
+                <element inactive_on_update="false" label="Cancelada" sequence="4" value="cancelada"/>
+                <element inactive_on_update="false" label="Resolvida" sequence="3" value="resolvida"/>
+            </choice>
+        </element>
+        <element label="Entrega" mandatory="true" max_length="32" name="entrega" reference="x_915815_smart_log_entrega" type="reference"/>
+        <index name="index">
+            <element name="entrega"/>
+        </index>
+        <index name="index2">
+            <element name="responsavel"/>
+        </index>
+    </element>
+</database>

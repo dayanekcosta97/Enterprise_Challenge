@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="efa73bb88362435059d35fd6feaad3d8" label="Atualização de Tracking" max_length="40" name="x_915815_smart_log_tracking" type="collection">
+        <element label="Entrega" mandatory="true" max_length="32" name="entrega" reference="x_915815_smart_log_entrega" type="reference"/>
+        <element label="Localização atual" max_length="40" name="localizacao_atual" type="string"/>
+        <element label="Origem da atualização" max_length="40" name="origem_atualizacao" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Sistema" sequence="3" value="sistema"/>
+                <element inactive_on_update="false" label="Transportadora" sequence="2" value="transportadora"/>
+                <element inactive_on_update="false" label="API" sequence="4" value="api"/>
+                <element inactive_on_update="false" label="Manual" sequence="1" value="manual"/>
+            </choice>
+        </element>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Data e hora da atualização" max_length="40" name="data_atualizacao" type="glide_date_time"/>
+        <element label="Responsável pela atualização" max_length="32" name="responsavel" reference="sys_user" type="reference"/>
+        <element label="Novo status" max_length="40" name="novo_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cancelado" sequence="8" value="cancelado"/>
+                <element inactive_on_update="false" label="Pronto para envio" sequence="3" value="pronto_envio"/>
+                <element inactive_on_update="false" label="Em preparação" sequence="2" value="em_preparacao"/>
+                <element inactive_on_update="false" label="Entregue" sequence="6" value="entregue"/>
+                <element inactive_on_update="false" label="Atrasado" sequence="7" value="atrasado"/>
+                <element inactive_on_update="false" label="Próximo ao destino" sequence="5" value="proximo_destino"/>
+                <element inactive_on_update="false" label="Pedido criado" sequence="1" value="pedido_criado"/>
+                <element inactive_on_update="false" label="Em transporte" sequence="4" value="em_transporte"/>
+            </choice>
+        </element>
+        <element label="Descrição da atualização" max_length="4000" name="descricao" type="multi_two_lines"/>
+        <index name="index">
+            <element name="entrega"/>
+        </index>
+        <index name="index2">
+            <element name="responsavel"/>
+        </index>
+    </element>
+</database>

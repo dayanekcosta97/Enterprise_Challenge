@@ -1,14 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_module">
-  <sys_app_module action="INSERT_OR_UPDATE">
-    <sys_id>a37249bdbb6345ff844a9972765c63f4</sys_id>
-    <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
-    <sys_update_name>sys_app_module_a37249bdbb6345ff844a9972765c63f4</sys_update_name>
-    <active>true</active>
-    <application>9b06db40f9f446d78f2c992196960d9b</application>
-    <filter>status=atrasado^ativo=true</filter>
-    <link_type>FILTER</link_type>
-    <name>x_915815_smart_log_entrega</name>
-    <order>900</order>
-    <title>Entregas Atrasadas</title>
-  </sys_app_module>
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Smart Logistics 5.0">9b06db40f9f446d78f2c992196960d9b</application>
+        <assessment/>
+        <device_type/>
+        <filter table="x_915815_smart_log_entrega">status=atrasado^ativo=true<item display_value="Atrasado" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="atrasado"/>
+            <item endquery="false" field="ativo" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>FILTER</link_type>
+        <map_page/>
+        <mobile_title/>
+        <mobile_view_name/>
+        <name>x_915815_smart_log_entrega</name>
+        <order>900</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>false</require_confirmation>
+        <roles/>
+        <route/>
+        <screen/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-06 00:19:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a37249bdbb6345ff844a9972765c63f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Entregas Atrasadas</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name>sys_app_module_a37249bdbb6345ff844a9972765c63f4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-06 00:19:25</sys_updated_on>
+        <timeline_page/>
+        <title>Entregas Atrasadas</title>
+        <uncancelable>false</uncancelable>
+        <ux_list/>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
 </record_update>

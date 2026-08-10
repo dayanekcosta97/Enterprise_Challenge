@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <name>chrome_toolbar</name>
+        <page display_value="Smart Logistics Workspace">d581a597fb7544d3a3d2904c5adb806f</page>
+        <required_translations/>
+        <route/>
+        <suffix>chrome_toolbar</suffix>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 22:15:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dd88ebdf8e2c4583843b3cfb5cda1ca9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>chrome_toolbar</sys_name>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name>sys_ux_page_property_dd88ebdf8e2c4583843b3cfb5cda1ca9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 22:15:16</sys_updated_on>
+        <type>json</type>
+        <unique_name/>
+        <value>[{"id":"home","label":{"translatable":true,"message":"Home"},"icon":"home-fill","routeInfo":{"route":"home"},"group":"top","order":100,"badge":{},"presence":{},"availability":{},"viewportInfo":{}},{"id":"list","label":{"translatable":true,"message":"List"},"icon":"list-fill","routeInfo":{"route":"list"},"group":"top","order":200,"badge":{},"presence":{},"availability":{},"viewportInfo":{}}]</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=dd88ebdf8e2c4583843b3cfb5cda1ca9"/>
+</record_update>

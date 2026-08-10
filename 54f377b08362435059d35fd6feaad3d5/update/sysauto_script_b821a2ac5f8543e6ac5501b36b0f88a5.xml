@@ -1,34 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
-  <sysauto_script action="INSERT_OR_UPDATE">
-    <sys_id>b821a2ac5f8543e6ac5501b36b0f88a5</sys_id>
-    <sys_scope display_value="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_scope>
-    <sys_update_name>sysauto_script_b821a2ac5f8543e6ac5501b36b0f88a5</sys_update_name>
-    <active>true</active>
-    <advanced>false</advanced>
-    <business_calendar/>
-    <condition/>
-    <conditional>false</conditional>
-    <entered_run_end/>
-    <entered_run_start/>
-    <entered_time/>
-    <max_drift/>
-    <name>One-time Data Fix - Prioridade and Entrega Corrections</name>
-    <offset/>
-    <offset_type>0</offset_type>
-    <repeat_every/>
-    <run_as/>
-    <run_as_tz/>
-    <run_dayofmonth>1</run_dayofmonth>
-    <run_dayofweek>1</run_dayofweek>
-    <run_daysofweek/>
-    <run_end/>
-    <run_month/>
-    <run_period/>
-    <run_start>2026-08-06 01:40:01</run_start>
-    <run_time>1970-01-01 00:00:00</run_time>
-    <run_type>on_demand</run_type>
-    <run_weekinmonth/>
-    <script><![CDATA[(function () {
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time/>
+        <max_drift/>
+        <name>One-time Data Fix - Prioridade and Entrega Corrections</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
+        <run_period/>
+        <run_start>2026-08-06 01:40:01</run_start>
+        <run_time>1970-01-01 00:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <run_weekinmonth/>
+        <script><![CDATA[(function () {
     // Clear data_real_entrega on ENT0001050 (status is not entregue)
     var gr = new GlideRecord('x_915815_smart_log_entrega');
     if (gr.get('3c1ba59983a2075059d35fd6feaad3c8')) {
@@ -58,9 +55,19 @@
     gs.info('One-time data fix completed.');
 })();
 ]]></script>
-    <sys_name>One-time Data Fix - Prioridade and Entrega Corrections</sys_name>
-    <sys_policy/>
-    <time_zone/>
-    <upgrade_safe>false</upgrade_safe>
-  </sysauto_script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-06 01:40:18</sys_created_on>
+        <sys_id>b821a2ac5f8543e6ac5501b36b0f88a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>One-time Data Fix - Prioridade and Entrega Corrections</sys_name>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name>sysauto_script_b821a2ac5f8543e6ac5501b36b0f88a5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-06 01:40:18</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
 </record_update>

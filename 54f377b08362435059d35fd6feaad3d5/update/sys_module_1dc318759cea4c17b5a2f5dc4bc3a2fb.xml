@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[import { GlideDateTime } from '@servicenow/glide';
+export function setDefaultsEntrega(current) {
+    current.setValue('status', 'pedido_criado');
+    current.setValue('risco_atraso', 'baixo');
+    current.setValue('ativo', 'true');
+    var now = new GlideDateTime();
+    current.setValue('ultima_atualizacao', now.getValue());
+}
+]]></content>
+        <external_source>false</external_source>
+        <path>x_915815_smart_log/x-915815-smart-logistics-5-0/1.0.0/src/server/business-rules/set-defaults-entrega.ts</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-04 21:47:00</sys_created_on>
+        <sys_id>1dc318759cea4c17b5a2f5dc4bc3a2fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_915815_smart_log/x-915815-smart-logistics-5-0/1.0.0/src/server/business-rules/set-defaults-entrega.ts</sys_name>
+        <sys_package display_value="Smart Logistics 5.0" source="x_915815_smart_log">54f377b08362435059d35fd6feaad3d5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart Logistics 5.0">54f377b08362435059d35fd6feaad3d5</sys_scope>
+        <sys_update_name>sys_module_1dc318759cea4c17b5a2f5dc4bc3a2fb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-04 21:47:00</sys_updated_on>
+    </sys_module>
+</record_update>

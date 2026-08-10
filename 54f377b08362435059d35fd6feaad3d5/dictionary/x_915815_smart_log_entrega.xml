@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0cb77bb88362435059d35fd6feaad3de" label="Entrega" max_length="40" name="x_915815_smart_log_entrega" type="collection">
+        <element label="Número do pedido" max_length="40" name="numero_pedido" type="string"/>
+        <element choice="3" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cancelado" sequence="8" value="cancelado"/>
+                <element inactive_on_update="false" label="Entregue" sequence="6" value="entregue"/>
+                <element inactive_on_update="false" label="Pronto para envio" sequence="3" value="pronto_envio"/>
+                <element inactive_on_update="false" label="Pedido criado" sequence="1" value="pedido_criado"/>
+                <element inactive_on_update="false" label="Atrasado" sequence="7" value="atrasado"/>
+                <element inactive_on_update="false" label="Em transporte" sequence="4" value="em_transporte"/>
+                <element inactive_on_update="false" label="Próximo ao destino" sequence="5" value="proximo_destino"/>
+                <element inactive_on_update="false" label="Em preparação" sequence="2" value="em_preparacao"/>
+            </choice>
+        </element>
+        <element default="true" label="Ativo" max_length="40" name="ativo" type="boolean"/>
+        <element label="E-mail do cliente" max_length="255" name="email_cliente" type="email"/>
+        <element label="ETA atualizado" max_length="40" name="eta_atualizado" type="glide_date_time"/>
+        <element label="Origem" max_length="40" name="origem" type="string"/>
+        <element choice="3" label="Risco de atraso" mandatory="true" max_length="40" name="risco_atraso" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Baixo" sequence="1" value="baixo"/>
+                <element inactive_on_update="false" label="Médio" sequence="2" value="medio"/>
+                <element inactive_on_update="false" label="Alto" sequence="3" value="alto"/>
+            </choice>
+        </element>
+        <element label="Distância estimada em km" max_length="20" name="distancia_km" type="decimal"/>
+        <element label="Última atualização" max_length="40" name="ultima_atualizacao" type="glide_date_time"/>
+        <element label="Observações" max_length="4000" name="observacoes" type="multi_two_lines"/>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" read_only="true" read_only_option="display_read_only" type="string"/>
+        <element label="Destino" max_length="40" name="destino" type="string"/>
+        <element label="Motivo do risco" max_length="200" name="motivo_risco" type="string"/>
+        <element label="Transportadora" max_length="40" name="transportadora" type="string"/>
+        <element choice="3" label="Prioridade" mandatory="true" max_length="40" name="prioridade" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Crítica" sequence="4" value="critica"/>
+                <element inactive_on_update="false" label="Média" sequence="2" value="media"/>
+                <element inactive_on_update="false" label="Alta" sequence="3" value="alta"/>
+                <element inactive_on_update="false" label="Baixa" sequence="1" value="baixa"/>
+            </choice>
+        </element>
+        <element label="Cliente" max_length="40" name="cliente" type="string"/>
+        <element label="Previsão original de entrega" max_length="40" name="previsao_original" type="glide_date_time"/>
+        <element label="Telefone do cliente" max_length="40" name="telefone_cliente" type="phone_number"/>
+        <element label="Data real da entrega" max_length="40" name="data_real_entrega" type="glide_date_time"/>
+    </element>
+</database>
