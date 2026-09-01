@@ -1,0 +1,78 @@
+<section class="page-heading">
+  <p class="eyebrow">Smart Logistics 5.0</p>
+  <h1>Dashboard Operacional</h1>
+  <p class="subtitle">Visão consolidada das entregas e dos pontos que pedem atenção.</p>
+</section>
+
+<div *ngIf="carregando" class="state-box">Carregando indicadores operacionais...</div>
+<div *ngIf="erro" class="state-box error">{{ erro }}</div>
+
+<ng-container *ngIf="!carregando && !erro">
+  <section class="metrics" aria-label="Indicadores de entregas">
+    <article class="metric-card">
+      <span class="metric-icon total">Σ</span>
+      <div>
+        <strong>{{ totalEntregas }}</strong>
+        <span>Total de Entregas</span>
+      </div>
+    </article>
+
+    <article class="metric-card">
+      <span class="metric-icon moving">→</span>
+      <div>
+        <strong>{{ emTransporte }}</strong>
+        <span>Em Transporte</span>
+      </div>
+    </article>
+
+    <article class="metric-card" [class.attention]="emRiscoAlto > 0">
+      <span class="metric-icon risk">!</span>
+      <div>
+        <strong>{{ emRiscoAlto }}</strong>
+        <span>Em Risco Alto</span>
+      </div>
+    </article>
+
+    <article class="metric-card" [class.attention]="atrasadas > 0">
+      <span class="metric-icon late">⌛</span>
+      <div>
+        <strong>{{ atrasadas }}</strong>
+        <span>Atrasadas</span>
+      </div>
+    </article>
+  </section>
+
+  <div *ngIf="entregas.length === 0" class="state-box">
+    Nenhuma entrega cadastrada no momento.
+  </div>
+
+  <section *ngIf="entregas.length > 0" class="panel recent-panel">
+    <div class="panel-header">
+      <div>
+        <h2>Entregas recentes</h2>
+        <span>Últimos registros recebidos pela API</span>
+      </div>
+      <a routerLink="/entregas">Ver todas</a>
+    </div>
+
+    <div class="recent-list">
+      <article *ngFor="let entrega of entregasRecentes" class="recent-item">
+        <div class="delivery-id">
+          <span>{{ entrega.numero }}</span>
+          <strong>{{ entrega.cliente }}</strong>
+        </div>
+        <div class="route">
+          <span>{{ entrega.origem }}</span>
+          <span class="route-arrow">→</span>
+          <span>{{ entrega.destino }}</span>
+        </div>
+        <div class="recent-status">
+          <span class="badge">{{ entrega.status }}</span>
+          <span class="badge" [class.high-risk]="entrega.risco === 'ALTO'">
+            {{ entrega.risco }}
+          </span>
+        </div>
+      </article>
+    </div>
+  </section>
+</ng-container>

@@ -1,0 +1,111 @@
+<section class="page-heading">
+  <p class="eyebrow">Administração</p>
+  <h1>Cadastrar Nova Entrega</h1>
+  <p class="subtitle">Preencha os dados operacionais para adicionar uma entrega ao monitoramento.</p>
+</section>
+
+<section class="form-panel">
+  <div class="form-intro">
+    <span class="step">01</span>
+    <div>
+      <h2>Dados da entrega</h2>
+      <p>Todos os campos são obrigatórios.</p>
+    </div>
+  </div>
+
+  <form #entregaForm="ngForm" (ngSubmit)="salvar(entregaForm)" novalidate>
+    <div class="form-grid">
+      <label>
+        Número
+        <input
+          type="text"
+          name="numero"
+          required
+          maxlength="50"
+          placeholder="Ex.: ENT0001052"
+          [(ngModel)]="entrega.numero"
+          #numero="ngModel"
+        />
+        <small *ngIf="numero.invalid && numero.touched">Informe o número da entrega.</small>
+      </label>
+
+      <label>
+        Cliente
+        <input
+          type="text"
+          name="cliente"
+          required
+          maxlength="150"
+          placeholder="Nome do cliente"
+          [(ngModel)]="entrega.cliente"
+          #cliente="ngModel"
+        />
+        <small *ngIf="cliente.invalid && cliente.touched">Informe o cliente.</small>
+      </label>
+
+      <label>
+        Origem
+        <input
+          type="text"
+          name="origem"
+          required
+          maxlength="150"
+          placeholder="Cidade/UF"
+          [(ngModel)]="entrega.origem"
+          #origem="ngModel"
+        />
+        <small *ngIf="origem.invalid && origem.touched">Informe a origem.</small>
+      </label>
+
+      <label>
+        Destino
+        <input
+          type="text"
+          name="destino"
+          required
+          maxlength="150"
+          placeholder="Cidade/UF"
+          [(ngModel)]="entrega.destino"
+          #destino="ngModel"
+        />
+        <small *ngIf="destino.invalid && destino.touched">Informe o destino.</small>
+      </label>
+
+      <label>
+        Status
+        <select name="status" required [(ngModel)]="entrega.status">
+          <option *ngFor="let status of statusDisponiveis" [value]="status">{{ status }}</option>
+        </select>
+      </label>
+
+      <label>
+        Risco
+        <select name="risco" required [(ngModel)]="entrega.risco">
+          <option *ngFor="let risco of riscosDisponiveis" [value]="risco">{{ risco }}</option>
+        </select>
+      </label>
+
+      <label class="full-width">
+        ETA — previsão de chegada
+        <input
+          type="datetime-local"
+          name="eta"
+          required
+          [(ngModel)]="entrega.eta"
+          #eta="ngModel"
+        />
+        <small *ngIf="eta.invalid && eta.touched">Informe a previsão de chegada.</small>
+      </label>
+    </div>
+
+    <div *ngIf="sucesso" class="feedback success" role="status">{{ sucesso }}</div>
+    <div *ngIf="erro" class="feedback error" role="alert">{{ erro }}</div>
+
+    <div class="form-actions">
+      <span>Integração: Smart Logistics API</span>
+      <button class="primary-button" type="submit" [disabled]="salvando">
+        {{ salvando ? 'SALVANDO...' : 'SALVAR ENTREGA' }}
+      </button>
+    </div>
+  </form>
+</section>

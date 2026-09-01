@@ -1,0 +1,38 @@
+.heading-row {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.panel-header span {
+  color: #829ab1;
+  font-size: 0.76rem;
+  font-weight: 650;
+}
+
+.delivery-number {
+  color: #0369a1;
+  font-weight: 800;
+}
+
+.high-risk-row {
+  background: #fffafa;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+@media (max-width: 620px) {
+  .heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

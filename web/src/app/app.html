@@ -1,0 +1,20 @@
+<header class="topbar">
+  <a class="brand" routerLink="/home" aria-label="Ir para o dashboard">
+    <span class="brand-mark">SL</span>
+    <span>{{ appName }}</span>
+  </a>
+
+  <nav aria-label="Navegação principal">
+    <a routerLink="/home" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/entregas" routerLinkActive="active">Entregas</a>
+    <a routerLink="/admin" routerLinkActive="active">Nova Entrega</a>
+  </nav>
+</header>
+
+<main class="app-shell">
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  Smart Logistics 5.0 · Operação conectada
+</footer>

@@ -1,0 +1,63 @@
+<section class="page-heading heading-row">
+  <div>
+    <p class="eyebrow">Operação</p>
+    <h1>Entregas</h1>
+    <p class="subtitle">Acompanhe rotas, prazos e níveis de risco em um único lugar.</p>
+  </div>
+  <a class="primary-button new-link" routerLink="/admin">+ Nova entrega</a>
+</section>
+
+<div *ngIf="carregando" class="state-box">Carregando entregas...</div>
+<div *ngIf="erro" class="state-box error">{{ erro }}</div>
+<div *ngIf="!carregando && !erro && entregas.length === 0" class="state-box">
+  Nenhuma entrega cadastrada.
+</div>
+
+<section *ngIf="!carregando && entregas.length > 0" class="panel">
+  <div class="panel-header">
+    <h2>Lista de entregas</h2>
+    <span>{{ entregas.length }} registro(s)</span>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Número</th>
+          <th>Cliente</th>
+          <th>Origem</th>
+          <th>Destino</th>
+          <th>Status</th>
+          <th>Risco</th>
+          <th>ETA</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entrega of entregas" [class.high-risk-row]="entrega.risco === 'ALTO'">
+          <td class="delivery-number">{{ entrega.numero }}</td>
+          <td>{{ entrega.cliente }}</td>
+          <td>{{ entrega.origem }}</td>
+          <td>{{ entrega.destino }}</td>
+          <td><span class="badge">{{ entrega.status }}</span></td>
+          <td>
+            <span class="badge" [class.high-risk]="entrega.risco === 'ALTO'">
+              {{ entrega.risco }}
+            </span>
+          </td>
+          <td>{{ entrega.eta | date: 'dd/MM/yyyy HH:mm' }}</td>
+          <td>
+            <button
+              class="danger-button"
+              type="button"
+              [disabled]="excluindoId === entrega.id"
+              (click)="excluir(entrega)"
+            >
+              {{ excluindoId === entrega.id ? 'Excluindo...' : 'Excluir' }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
