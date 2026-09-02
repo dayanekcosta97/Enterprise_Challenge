@@ -91,14 +91,14 @@
           type="datetime-local"
           name="eta"
           required
+          [min]="etaMinima"
           [(ngModel)]="entrega.eta"
           #eta="ngModel"
         />
-        <small *ngIf="eta.invalid && eta.touched">Informe a previsão de chegada.</small>
+        <small *ngIf="eta.invalid && eta.touched">Informe uma previsão de chegada futura.</small>
       </label>
     </div>
 
-    <div *ngIf="sucesso" class="feedback success" role="status">{{ sucesso }}</div>
     <div *ngIf="erro" class="feedback error" role="alert">{{ erro }}</div>
 
     <div class="form-actions">
