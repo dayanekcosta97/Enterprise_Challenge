@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 import { Entrega } from '../../models/entrega.model';
 import { EntregaService } from '../../services/entrega.service';
@@ -14,7 +14,10 @@ export class HomeComponent implements OnInit {
   carregando = true;
   erro = '';
 
-  constructor(private readonly entregaService: EntregaService) {}
+  constructor(
+    private readonly entregaService: EntregaService,
+    private readonly changeDetector: ChangeDetectorRef,
+  ) {}
 
   ngOnInit(): void {
     this.carregarEntregas();
@@ -56,10 +59,12 @@ export class HomeComponent implements OnInit {
       next: (entregas) => {
         this.entregas = entregas;
         this.carregando = false;
+        this.changeDetector.markForCheck();
       },
       error: () => {
         this.erro = 'Não foi possível carregar os dados. Confirme se o backend está ativo.';
         this.carregando = false;
+        this.changeDetector.markForCheck();
       },
     });
   }

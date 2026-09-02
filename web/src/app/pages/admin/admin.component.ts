@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -24,6 +24,7 @@ export class AdminComponent {
   constructor(
     private readonly entregaService: EntregaService,
     private readonly router: Router,
+    private readonly changeDetector: ChangeDetectorRef,
   ) {}
 
   salvar(formulario: NgForm): void {
@@ -43,6 +44,7 @@ export class AdminComponent {
       error: (erro: HttpErrorResponse) => {
         this.salvando = false;
         this.erro = this.obterMensagemErro(erro);
+        this.changeDetector.markForCheck();
       },
     });
   }

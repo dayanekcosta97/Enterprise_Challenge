@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 import { Entrega } from '../../models/entrega.model';
 import { EntregaService } from '../../services/entrega.service';
@@ -15,7 +15,10 @@ export class EntregasComponent implements OnInit {
   erro = '';
   excluindoId?: number;
 
-  constructor(private readonly entregaService: EntregaService) {}
+  constructor(
+    private readonly entregaService: EntregaService,
+    private readonly changeDetector: ChangeDetectorRef,
+  ) {}
 
   ngOnInit(): void {
     this.carregarEntregas();
@@ -33,10 +36,12 @@ export class EntregasComponent implements OnInit {
       next: () => {
         this.entregas = this.entregas.filter((item) => item.id !== entrega.id);
         this.excluindoId = undefined;
+        this.changeDetector.markForCheck();
       },
       error: () => {
         this.erro = `Não foi possível excluir a entrega ${entrega.numero}.`;
         this.excluindoId = undefined;
+        this.changeDetector.markForCheck();
       },
     });
   }
@@ -49,10 +54,12 @@ export class EntregasComponent implements OnInit {
       next: (entregas) => {
         this.entregas = entregas;
         this.carregando = false;
+        this.changeDetector.markForCheck();
       },
       error: () => {
         this.erro = 'Não foi possível carregar as entregas. Verifique a conexão com a API.';
         this.carregando = false;
+        this.changeDetector.markForCheck();
       },
     });
   }
