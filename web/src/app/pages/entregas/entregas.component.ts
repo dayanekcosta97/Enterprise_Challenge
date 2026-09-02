@@ -41,7 +41,7 @@ export class EntregasComponent implements OnInit {
     });
   }
 
-  private carregarEntregas(): void {
+  carregarEntregas(): void {
     this.carregando = true;
     this.erro = '';
 

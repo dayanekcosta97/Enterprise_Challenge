@@ -29,6 +29,10 @@ button:disabled {
   opacity: 0.6;
 }
 
+.state-box.error p {
+  margin: 0 0 1rem;
+}
+
 @media (max-width: 620px) {
   .heading-row {
     align-items: flex-start;

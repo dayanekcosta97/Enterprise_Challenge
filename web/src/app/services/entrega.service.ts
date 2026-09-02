@@ -6,7 +6,7 @@ import { Entrega } from '../models/entrega.model';
 
 @Injectable({ providedIn: 'root' })
 export class EntregaService {
-  private readonly apiUrl = 'http://localhost:8080/api/entregas';
+  private readonly apiUrl = '/api/entregas';
 
   // Credenciais fixas somente para o MVP acadêmico executado localmente.
   private readonly options = {
