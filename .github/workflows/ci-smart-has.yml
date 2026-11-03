@@ -1,0 +1,97 @@
+name: Smart HAS - CI/CD academico
+
+on:
+  push:
+    branches: [feature/smart-has-mobile]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar-e-implantar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+          cache-dependency-path: backend/pom.xml
+
+      - name: Build e testes JUnit existentes (H2)
+        run: mvn -B -ntp -f backend/pom.xml clean verify
+
+      - name: Verificar segredo Oracle
+        env:
+          ORACLE_APP_PASSWORD: ${{ secrets.ORACLE_APP_PASSWORD }}
+        run: |
+          if [ -z "$ORACLE_APP_PASSWORD" ]; then
+            echo "::error::Configure o repository secret ORACLE_APP_PASSWORD antes de executar o deploy Oracle."
+            exit 1
+          fi
+
+      - name: Iniciar Oracle Free temporario
+        uses: gvenzl/setup-oracle-free@v1
+        with:
+          container-runtime: docker
+          app-user: SMARTHAS
+          app-user-password: ${{ secrets.ORACLE_APP_PASSWORD }}
+
+      - name: Deploy do esquema Oracle e testes PL/SQL
+        env:
+          ORACLE_APP_PASSWORD: ${{ secrets.ORACLE_APP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          docker exec oracledb mkdir -p /tmp/smarthas
+          docker cp database/. oracledb:/tmp/smarthas/
+          docker exec -e ORACLE_APP_PASSWORD="$ORACLE_APP_PASSWORD" oracledb bash -c '
+            set -e
+            cd /tmp/smarthas
+            for script in 01_schema.sql 02_package.sql 03_trigger.sql 04_testes.sql; do
+              echo "Executando $script"
+              sqlplus -L -s "SMARTHAS/${ORACLE_APP_PASSWORD}@//localhost:1521/FREEPDB1" "@${script}" || exit 1
+            done
+          ' | tee oracle-sql.log
+
+      - name: Deploy temporario do backend e teste da API Oracle
+        env:
+          SPRING_PROFILES_ACTIVE: oracle
+          ORACLE_JDBC_URL: jdbc:oracle:thin:@//localhost:1521/FREEPDB1
+          ORACLE_USER: SMARTHAS
+          ORACLE_PASSWORD: ${{ secrets.ORACLE_APP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          JAR=$(find backend/target -maxdepth 1 -name '*.jar' -print -quit)
+          test -n "$JAR"
+          nohup java -jar "$JAR" > backend-runtime.log 2>&1 &
+          READY=0
+          for i in $(seq 1 45); do
+            if curl -fsS http://localhost:8080/status >/dev/null 2>&1; then
+              READY=1
+              break
+            fi
+            sleep 2
+          done
+          test "$READY" -eq 1
+          curl -fsS -u admin:admin123 \
+            'http://localhost:8080/api/oracle/entregas?status=EM_TRANSITO' \
+            | tee oracle-api.json
+          grep -q 'ENT001' oracle-api.json
+
+      - name: Registrar logs, testes e build
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidencias-smart-has
+          if-no-files-found: warn
+          path: |
+            backend/target/*.jar
+            backend/target/surefire-reports/
+            oracle-sql.log
+            oracle-api.json
+            backend-runtime.log
