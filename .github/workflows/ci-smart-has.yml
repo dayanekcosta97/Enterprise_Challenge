@@ -54,7 +54,15 @@ jobs:
             cd /tmp/smarthas
             for script in 01_schema.sql 02_package.sql 03_trigger.sql 04_testes.sql; do
               echo "Executando $script"
-              sqlplus -L -s "SMARTHAS/${ORACLE_APP_PASSWORD}@//localhost:1521/FREEPDB1" "@${script}" || exit 1
+              # SQL*Plus exige senha entre aspas se ela contiver @ ou outros simbolos.
+            # O heredoc evita interpretar a senha como parte do endereco Oracle.
+            sqlplus -L -s /nolog <<EOSQL
+          SET DEFINE OFF
+          WHENEVER SQLERROR EXIT SQL.SQLCODE
+          CONNECT SMARTHAS/"${ORACLE_APP_PASSWORD}"@//localhost:1521/FREEPDB1
+          @${script}
+          EXIT
+          EOSQL
             done
           ' | tee oracle-sql.log
 
